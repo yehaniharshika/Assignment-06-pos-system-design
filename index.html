@@ -73,10 +73,10 @@
         }
 
         .main-img{
-            top: 200px;
+            top: 240px;
             position: absolute;
-            width: 1600px;
-            height: 1400px;
+            width: 2000px;
+            height: 1800px;
             left: 130px;
         }
 
@@ -128,8 +128,8 @@
         }
 
         #customer-part{
-            width: 2000px;
-            height: 700px;
+            width: 1800px;
+            height: 1200px;
             background-color: #F7E6FE;
             top: 1000px;
             left: 0;
@@ -139,7 +139,7 @@
         }
 
         #customer-label-part{
-            width: 2000px;
+            width: 1800px;
             height: 100px;
             background-color: #262A56;
             top: 0;
@@ -165,113 +165,43 @@
         }
 
         #search-part{
-            top: 340px;
-            left: 50px;
+            top: 250px;
+            left: 0;
+            right: 0;
+            margin: auto;
             width: 1500px;
-            height: 400px;
+            height: 300px;
             position: absolute;
             background-color: white;
         }
 
-        #button-add-new-customer{
-            top: 300px;
-            position: absolute;
-        }
-
-        #button-view-all-customers{
-            top: 300px;
-            left: 180px;
-            position: absolute;
-        }
-
-        /*.customer-section div{
-            width: 2000px;
-            height: 700px;
-            background-color: #F7E6FE;
-            top: 1000px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: absolute;
-        }*/
-
-        /*.customer div{
-            width: 2000px;
-            height: 700px;
-            background-color: #F7E6FE;
-            top: 1000px;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: absolute;
-        }*/
-
-       /* .customer-section div div{
-            width: 2000px;
-            height: 100px;
-            background-color: #262A56;
-            top: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            position: absolute;
-        }*/
-
-       /* .customer-section div div h2{
-            color: white;
-            top: 30px;
-            left: 900px;
-            margin: auto;
-            position: absolute;
-        }*/
-
-        /*#button-add{
-            top: 120px;
-            position: absolute;
-            left: 30px;
-        }
-
-        #button-view{
-            top: 120px;
-            position: absolute;
-            left: 230px;
-        }*/
-
-        /*.customer-search{
-            width: 600px;
-            height: 600px;
-            background-color: red;
-            position: absolute;
-            top: 400px;
-
-        }*/
-
-       .card-body{
-            width: 2000px;
-            height: 300px;
-            left: 70px;
-            top: 1000px;
-            position: absolute;
-            background-color: lightskyblue;
-        }
-
-        .form-control{
-            width: 450px;
+        #search-label-part{
+            width: 1500px;
             height: 50px;
-            left:  30px;
-            top: 100px;
             position: absolute;
-            border: 2px solid black;
+            top: 0;
+            background-color: #824D96;
         }
 
-        .text{
+        #search-label-part h4{
             color: white;
+            left: 10px;
             position: absolute;
-            left: 900px;
-            top: 20px;
+            top: 10px;
+
         }
 
-        .form-select{
+        #button-add-new-customer{
+            width: 230px;
+            top: 150px;
+            left: 150px;
+            position: absolute;
+            border: 5px solid red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .customer-name-box{
             position: absolute;
             top: 180px;
             left: 180px;
@@ -279,23 +209,394 @@
             border: 2px solid black;
         }
 
-        /*.btn{
-            position: absolute;
+        .btn-customer-search{
             top: 180px;
             left: 30px;
-            border: 2px solid black;
-            height: 50px;
-            width: 130px;
+            width: 120px;
+            height: 45px;
+            font-size: 18.5px;
             font-weight: bold;
-            font-size: 20px;
-            border-radius: 30px;
-        }*/
-
-        .table{
-            top: 350px;
-            width: 1000px;
             position: absolute;
         }
+
+        .customer-search-text-field{
+            background-color: white;
+            top: 100px;
+            width: 700px;
+            left: 30px;
+            height: 50px;
+            font-size: 19px;
+            font-weight: 500;
+            position: absolute;
+            border: 2px solid black;
+        }
+
+        .tbl-customer{
+            top: 600px;
+            width: 1500px;
+            height: 200px;
+            position: absolute;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+
+        .cus-card{
+            max-width: 800px;
+            margin-top: 50px;
+            height: 600px;
+            background-color: lightskyblue;
+        }
+
+        .name-text{
+            top: 170px;
+            left: 18px;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+            position: absolute;
+        }
+
+        .input-id{
+            top: 50px;
+            height: 50px;
+            left: 18px;
+            width: 450px;
+            border: 2px solid darkblue;
+            position: absolute;
+        }
+
+        .telNumber{
+            top: 440px;
+            left: 18px;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+            position: absolute;
+        }
+
+        .text-address{
+            top: 290px;
+            left: 18px;
+            width: 450px;
+            border: 2px solid darkblue;
+            position: absolute;
+        }
+
+        .label-customerID{
+            top: 20px;
+            position: absolute;
+        }
+
+        .label-customerName{
+            top: 140px;
+            position: absolute;
+        }
+
+        .label-customerAddress{
+            top: 260px;
+            position: absolute;
+        }
+
+        .label-customerTel{
+            top: 410px;
+            position: absolute;
+
+        }
+
+
+
+        #customer-save{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #close-from{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #customer-delete{
+            background-color: #B53471;
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #customer-close{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #customer-update{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #table-topic{
+            font-weight: 600;
+            font-size: 20px;
+            color: blue;
+        }
+
+        #item-part{
+            width: 1800px;
+            height: 1200px;
+            background-color: #F7E6FE;
+            top: 2500px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+        }
+
+        #item-label-part{
+            width: 1800px;
+            height: 100px;
+            background-color: #262A56;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+        }
+
+        #item-label-part h2{
+            color: white;
+            position: absolute;
+            left: 200px;
+            top: 33px;
+        }
+
+        .img-item{
+            color: white;
+            font-size: 30px;
+            top: 35px;
+            left: 150px;
+            position: absolute;
+        }
+
+        #item-search-part{
+            top: 250px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 1500px;
+            height: 300px;
+            position: absolute;
+            background-color: white;
+        }
+
+        #item-search-label-part{
+            width: 1500px;
+            height: 50px;
+            position: absolute;
+            top: 0;
+            background-color: #824D96;
+        }
+
+        #item-search-label-part h4{
+            color: white;
+            left: 10px;
+            position: absolute;
+            top: 10px;
+
+        }
+
+        .item-search-text-field{
+            background-color: white;
+            top: 100px;
+            width: 700px;
+            left: 30px;
+            height: 50px;
+            font-size: 19px;
+            font-weight: 500;
+            position: absolute;
+            border: 2px solid black;
+        }
+
+        #button-add-new-item{
+            width: 230px;
+            top: 150px;
+            left: 150px;
+            position: absolute;
+            border: 5px solid red;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .btn-item-search{
+            top: 180px;
+            left: 30px;
+            width: 120px;
+            height: 45px;
+            font-size: 18.5px;
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .item-card{
+            max-width: 600px;
+            margin-top: 50px;
+            height: 600px;
+            background-color: lightskyblue;
+        }
+
+        .label-ItemCode{
+            top: 20px;
+            position: absolute;
+        }
+
+        .label-ItemName{
+            top: 140px;
+            position: absolute;
+        }
+
+        .label-ItemPrice{
+            top: 260px;
+            position: absolute;
+        }
+
+        .label-ItemQty{
+            top: 380px;
+            position: absolute;
+        }
+
+        .input-code{
+            top: 50px;
+            left: 18px;
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+        }
+        .input-item{
+            top: 170px;
+            left: 18px;
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+        }
+
+        .input-price{
+            top: 290px;
+            left: 18px;
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+        }
+
+        .input-qty{
+            top: 410px;
+            left: 18px;
+            position: absolute;
+            width: 450px;
+            height: 50px;
+            border: 2px solid darkblue;
+        }
+
+        #close-item{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #item-save{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #item-update{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #item-delete{
+            background-color: #B53471;
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #item-close{
+            font-weight: bold;
+            font-size: 18px;
+            width: 120px;
+            height: 50px;
+            border-radius: 35px;
+        }
+
+        #item-table-topic{
+            font-weight: 600;
+            font-size: 20px;
+            color: blue;
+        }
+
+        #order-part{
+            width: 1800px;
+            height: 1200px;
+            background-color: #F7E6FE;
+            top: 4000px;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+        }
+
+        #order-label-part{
+            width: 1800px;
+            height: 100px;
+            background-color: #262A56;
+            top: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            position: absolute;
+        }
+
+        #order-label-part h2{
+            color: white;
+            position: absolute;
+            left: 200px;
+            top: 33px;
+        }
+
+        .img-orders{
+            color: white;
+            font-size: 30px;
+            top: 35px;
+            left: 150px;
+            position: absolute;
+        }
+
+
+
     </style>
 
 </head>
@@ -311,16 +612,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Customer</a>
+                        <a class="nav-link" href="#customer">Customer</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Items</a>
+                        <a class="nav-link" href="#item">Items</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Orders</a>
+                        <a class="nav-link" href="#orders">Orders</a>
                     </li>
 
                 </ul>
@@ -338,11 +639,52 @@
     <div class="main-img">
         <img src="assets/images/shopping.png">
     </div>
-
+<section id="home">
     <div>
         <h1 class="main-header1">Welcome,,,,,,,,,,,,,,,,,</h1>
         <h2 class="main-header2">POS Management System</h2>
     </div>
+</section>
+
+<!--customer modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel addCustomerLabel">Customer Registration Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body cus-card">
+                <!--customer add form-->
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-customerID">customer ID</label>
+                        <input type="text" class="form-control input-id" id="formGroupExampleInputModalId" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-customerName">customer Name</label>
+                        <input type="text" class="form-control name-text" id="formGroupExampleInputModal" placeholder="Enter customer Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1Modal" class="form-label label-customerAddress">customer Address</label>
+                        <textarea class="form-control text-address" id="exampleFormControlTextarea1Modal" placeholder="Enter address" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-customerTel">phone number</label>
+                        <input type="tel" class="form-control telNumber" id="formGroupExampleInput2Modal" placeholder="Enter phone number">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-from">Close</button>
+                <button type="button" class="btn btn-primary" id="customer-save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 <section>
     <div id="customer-part">
@@ -350,31 +692,30 @@
             <div>
                 <i class="fa-solid fa-users img-customer"></i>
             </div>
-            <h2>CUSTOMER</h2>
+            <h2 id="customer">CUSTOMER MANAGEMENT</h2>
         </div>
-        <button type="button" class="btn btn-outline-danger" id="button-add-new-customer">Add new customer</button>
-        <button type="button" class="btn btn-outline-warning" id="button-view-all-customers">view all customers</button>
+        <!--add new customer button-->
+        <button type="button" class="btn btn-outline-danger" id="button-add-new-customer"  data-bs-toggle="modal" data-bs-target="#exampleModal">+ Add new customer</button>
 
 
-        <div id="search-part"></div>
-    </div>
-</section>
-<!--<section class="customer">
-    <div class="card-body " >
-       <h2 class="text">Search Customer</h2>
-        <input class="form-control" type="text" placeholder="input customer ID/customer Name here..." aria-label="readonly input example" readonly>
+        <div id="search-part">
+            <div id="search-label-part">
+                <h4>search customer</h4>
+            </div>
+            <input class="form-control customer-search-text-field" type="text" placeholder="input customer ID/customer Name here..." aria-label="readonly input example" readonly>
 
-        <button type="button" class="btn btn-danger"  data-bs-toggle="modal" data-bs-target="#exampleModal">search</button>
+            <button type="button" class="btn btn-danger btn-customer-search"  data-bs-toggle="modal" data-bs-target="#customerModal">search</button>
 
-        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-            <option selected>customer Name</option>
-            <option value="1">Yehani Harshika</option>
-            <option value="2">Rumesh Chamoda</option>
-            <option value="3">Pavindu Eranga</option>
-        </select>
+            <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                <option selected>customer Name</option>
+                <option value="1">Yehani Harshika</option>
+                <option value="2">Rumesh Chamoda</option>
+                <option value="3">Pavindu Eranga</option>
+            </select>
+        </div>
 
-        <table class="table caption-top">
-            <caption>List of customers</caption>
+        <table class="table caption-top tbl-customer">
+            <caption id="table-topic">List of customers</caption>
             <thead>
             <tr>
                 <th scope="col">#</th>
@@ -396,23 +737,311 @@
             </tr>
             <tr>
                 <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <td>C-002</td>
+                <td>Pavindu Eranga</td>
+                <td>Panadura</td>
+                <td>076-8371849</td>
+                <td>25000</td>
             </tr>
             <tr>
                 <th scope="row">3</th>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
+                <td>C-003</td>
+                <td>Dewmini Pabasara</td>
+                <td>2/R, Gonapala</td>
+                <td>0782323123</td>
+                <td>50000</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
             </tr>
             </tbody>
         </table>
     </div>
+</section>
+
+<!--
+<div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel updateDeleteCustomerLabel">Customer Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body cus-card">
+                &lt;!&ndash;customer add form&ndash;&gt;
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-customerID">customer ID</label>
+                        <input type="text" class="form-control input-id" id="formGroupExampleInputModalCustomerId" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-customerName">customer Name</label>
+                        <input type="text" class="form-control name-text" id="formGroupExampleInputModalName" placeholder="Enter customer Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1Modal" class="form-label label-customerAddress">customer Address</label>
+                        <textarea class="form-control text-address" id="exampleFormControlTextarea1ModalAddress" placeholder="Enter address" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-customerTel">phone number</label>
+                        <input type="tel" class="form-control telNumber" id="formGroupExampleInput2ModalTelNumber" placeholder="Enter phone number">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="customer-close">Close</button>
+                <button type="button" class="btn btn-warning" id="customer-update">update</button>
+                <button type="button" class="btn btn-primary" id="customer-delete">delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+
+
+
+<!--<section>
+    <div id="item-part">
+        <div id="item-label-part">
+            <div>
+                <i class="fa-solid fa-business-time img-item"></i>
+            </div>
+            <h2 id="item">ITEM MANAGEMENT</h2>
+        </div>
+        <button type="button" class="btn btn-outline-danger" id="button-add-new-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">+ Add new item</button>
+
+
+        <div id="item-search-part">
+            <div id="item-search-label-part">
+                <h4>search items</h4>
+            </div>
+            <input class="form-control item-search-text-field" type="text" placeholder="Input Item code/item name here..." aria-label="readonly input example" readonly>
+
+            <button type="button" class="btn btn-danger btn-item-search"  data-bs-toggle="modal" data-bs-target="#ItemModal">search</button>
+
+            <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                <option selected>Item code</option>
+                <option value="1">I-001</option>
+                <option value="2">I-002</option>
+                <option value="3">I-003</option>
+                <option value="3">I-004</option>
+            </select>
+        </div>
+
+        <table class="table caption-top tbl-customer">
+            <caption id="item-table-topic">List of items</caption>
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Item Code</th>
+                <th scope="col">Item name</th>
+                <th scope="col">Item price</th>
+                <th scope="col">Item quantity</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>I-001</td>
+                <td>Milk powder</td>
+                <td>750.00</td>
+                <td>10</td>
+
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>I-002</td>
+                <td>Diana-Chocolate Biscuit</td>
+                <td>130.00</td>
+                <td>24</td>
+
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>I-003</td>
+                <td>Panda-Baby colonge</td>
+                <td>245.00</td>
+                <td>15</td>
+
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">7</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            <tr>
+                <th scope="row">8</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+&lt;!&ndash;add Item modal&ndash;&gt;
+<div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel addItemLabel">New Item</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body item-card">
+                &lt;!&ndash;item add form&ndash;&gt;
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemCode">Item code</label>
+                        <input type="text" class="form-control input-code" id="formGroupExampleInputModalCode" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemName">Item Name</label>
+                        <input type="text" class="form-control input-item" id="formGroupExampleInputModalItem" placeholder="Enter Item Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemPrice">Item Price</label>
+                        <input type="text" class="form-control input-price" id="formGroupExampleInputModalPrice" placeholder="Enter item price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-ItemQty">Item Quantity</label>
+                        <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalQty" placeholder="Enter Quantity">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-item">Close</button>
+                <button type="button" class="btn btn-primary" id="item-save">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+&lt;!&ndash;open model from item search&ndash;&gt;
+<div class="modal fade" id="ItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel addSearchItemLabel">Item Form</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body item-card">
+                &lt;!&ndash;item add form&ndash;&gt;
+                <form>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemCode">Item code</label>
+                        <input type="text" class="form-control input-code" id="formGroupExampleInputModalItemCode" placeholder="Enter customer ID">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemName">Item Name</label>
+                        <input type="text" class="form-control input-item" id="formGroupExampleInputModalItemName" placeholder="Enter Item Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInputModal" class="form-label label-ItemPrice">Item Price</label>
+                        <input type="text" class="form-control input-price" id="formGroupExampleInputModalItemPrice" placeholder="Enter item price">
+                    </div>
+                    <div class="mb-3">
+                        <label for="formGroupExampleInput2Modal" class="form-label label-ItemQty">Item Quantity</label>
+                        <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalItemQty" placeholder="Enter Quantity">
+                    </div>
+
+                    <br>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="item-close">Close</button>
+                <button type="button" class="btn btn-warning" id="item-update">update</button>
+                <button type="button" class="btn btn-primary" id="item-delete">delete</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section >
+    <div id="order-part">
+        <div id="order-label-part">
+            <div>
+                <i class="fa-solid fa-cart-shopping img-orders"></i>
+            </div>
+            <h2 id="orders">PLACE ORDER</h2>
+        </div>
+
+        <div id="invoice-details">
+
+        </div>
+    </div>
+
 </section>-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

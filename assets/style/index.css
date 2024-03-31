@@ -288,10 +288,7 @@ body{
 .label-customerTel{
     top: 410px;
     position: absolute;
-
 }
-
-
 
 #customer-save{
     font-weight: bold;
@@ -547,7 +544,7 @@ body{
 
 #order-part{
     width: 1800px;
-    height: 1200px;
+    height: 1700px;
     background-color: #F7E6FE;
     top: 4000px;
     left: 0;
@@ -1002,4 +999,20 @@ body{
 
 .purchase-button:hover{
     background-color: #3742FA;
+}
+
+.tbl-order{
+    top: 1200px;
+    width: 1500px;
+    height: 220px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+#order-table-topic{
+    font-weight: 600;
+    font-size: 20px;
+    color: blue;
 }

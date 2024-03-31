@@ -1016,3 +1016,13 @@ body{
     font-size: 20px;
     color: blue;
 }
+
+#footer-part{
+    top: 5800px;
+    position: absolute;
+    left: 900px;
+    bottom: 10px;
+    margin: auto;
+    font-size: 18px;
+    font-weight: 600;
+}

@@ -606,7 +606,7 @@ body{
     width: 500px;
     height: 1000px;
     position: absolute;
-    background-color: white;
+    background-color: #F0CCFD;
 }
 
 #label-invoice-detail{
@@ -881,4 +881,45 @@ body{
 .add-item-button:hover{
     color: white;
     background-color: blue;
+}
+
+.label-setTotalPrice{
+    font-weight: bold;
+    font-size: 42px;
+    top: 100px;
+    left: 30px;
+    position: absolute;
+    color: #3742FA;
+}
+
+.label-setSubTotalPrice{
+    font-weight: bold;
+    font-size: 42px;
+    top: 240px;
+    left: 30px;
+    position: absolute;
+    color: #E51824;
+}
+
+.input-TotalPrice{
+    top: 160px;
+    position: absolute;
+    left: 30px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+}
+
+.input-SubTotalPrice{
+    top: 300px;
+    position: absolute;
+    left: 30px;
+    width: 200px;
+    height: 50px;
+    border: 2px solid black;
+    background-color: #F0CCFD;
+    border-radius: 0;
+
 }

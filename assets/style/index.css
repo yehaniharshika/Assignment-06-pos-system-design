@@ -640,3 +640,122 @@ body{
     left: 180px;
     position: absolute;
 }
+
+.label-OrderId{
+    top: 120px;
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-orderDate{
+    top: 250px;
+    position: absolute;
+    font-size: 18px;
+    left: 30px;
+    font-weight: bold;
+}
+
+.label-load-customerId{
+    top: 370px;
+    position: absolute;
+    font-size: 18px;
+    left: 30px;
+    font-weight: bold;
+}
+
+.load-customer-Id{
+    top: 400px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 250px;
+    border: 2px solid black;
+}
+
+.label-setName{
+    top: 490px;
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setTel{
+    top: 735px;
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setCSalary{
+    top: 850px;
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setAddress{
+    top: 610px;
+    position: absolute;
+    left: 30px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.set-customerAddress{
+    top: 640px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.input-OrderId{
+    top: 150px;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+    position: absolute;
+}
+
+.input-Date{
+    top: 280px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-cSalary{
+    top: 880px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-customerTel{
+    top: 765px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-Cname{
+    top: 520px;
+    position: absolute;
+    left: 30px;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}

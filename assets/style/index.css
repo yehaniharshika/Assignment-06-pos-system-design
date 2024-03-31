@@ -644,7 +644,7 @@ body{
 .label-OrderId{
     top: 120px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -653,7 +653,7 @@ body{
     top: 250px;
     position: absolute;
     font-size: 18px;
-    left: 30px;
+    left: 35px;
     font-weight: bold;
 }
 
@@ -661,14 +661,14 @@ body{
     top: 370px;
     position: absolute;
     font-size: 18px;
-    left: 30px;
+    left: 35px;
     font-weight: bold;
 }
 
 .load-customer-Id{
     top: 400px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     height: 50px;
     width: 250px;
     border: 2px solid black;
@@ -677,7 +677,7 @@ body{
 .label-setName{
     top: 490px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -685,7 +685,7 @@ body{
 .label-setTel{
     top: 735px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -693,7 +693,7 @@ body{
 .label-setCSalary{
     top: 850px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -701,7 +701,7 @@ body{
 .label-setAddress{
     top: 610px;
     position: absolute;
-    left: 30px;
+    left: 35px;
     font-size: 18px;
     font-weight: bold;
 }
@@ -709,7 +709,9 @@ body{
 .set-customerAddress{
     top: 640px;
     position: absolute;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
@@ -717,7 +719,9 @@ body{
 
 .input-OrderId{
     top: 150px;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
@@ -727,7 +731,9 @@ body{
 .input-Date{
     top: 280px;
     position: absolute;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
@@ -736,7 +742,9 @@ body{
 .set-cSalary{
     top: 880px;
     position: absolute;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
@@ -745,7 +753,9 @@ body{
 .set-customerTel{
     top: 765px;
     position: absolute;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
@@ -754,8 +764,121 @@ body{
 .set-Cname{
     top: 520px;
     position: absolute;
-    left: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
     height: 50px;
     width: 430px;
     border: 2px solid black;
+}
+
+.label-load-itemCode{
+    top: 120px;
+    left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+}
+
+.label-setItemName{
+    top: 250px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setItemPrice{
+    top: 370px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.load-Item-code{
+    top: 150px;
+    position: absolute;
+    left: 35px;
+    height: 50px;
+    width: 250px;
+    border: 2px solid black;
+}
+
+.set-item-name{
+    top: 280px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-Item-price{
+    top: 400px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.label-setItemQty{
+    top: 490px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.label-setOrderQty{
+    top: 735px;
+    left: 35px;
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff253a;
+}
+
+.set-qty{
+    top: 520px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.set-OrderQty{
+    top: 765px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 50px;
+    width: 430px;
+    border: 2px solid black;
+}
+
+.add-item-button{
+    font-weight: bold;
+    width: 150px;
+    height: 50px;
+    top: 880px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    border-radius: 25px;
+}
+
+.add-item-button:hover{
+    color: white;
+    background-color: blue;
 }

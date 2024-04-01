@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -62,9 +63,9 @@ body{
 .main-img{
     top: 240px;
     position: absolute;
-    width: 2000px;
-    height: 1800px;
-    left: 130px;
+    width: 4000px;
+    height: 3800px;
+    left: 200px;
 }
 
 .Button{
@@ -85,6 +86,7 @@ body{
     font-weight: bold;
     font-size: 18px;
 }
+
 .main-header1{
     color: #824D96;
     position: absolute;
@@ -141,6 +143,10 @@ body{
     position: absolute;
     left: 200px;
     top: 33px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
 }
 
 .img-customer{
@@ -188,6 +194,16 @@ body{
     font-weight: bold;
 }
 
+#button-view-customer{
+    width: 230px;
+    top: 150px;
+    left: 420px;
+    position: absolute;
+    border: 5px solid gray;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .customer-name-box{
     position: absolute;
     top: 180px;
@@ -226,6 +242,7 @@ body{
     right: 0;
     left: 0;
     margin: auto;
+    border: 2px solid black;
 }
 
 .cus-card{
@@ -364,6 +381,10 @@ body{
     position: absolute;
     left: 200px;
     top: 33px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
 }
 
 .img-item{
@@ -398,7 +419,6 @@ body{
     left: 10px;
     position: absolute;
     top: 10px;
-
 }
 
 .item-search-text-field{
@@ -419,6 +439,16 @@ body{
     left: 150px;
     position: absolute;
     border: 5px solid red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#button-view-item{
+    width: 230px;
+    top: 150px;
+    left: 420px;
+    position: absolute;
+    border: 5px solid grey;
     font-size: 20px;
     font-weight: bold;
 }
@@ -569,6 +599,10 @@ body{
     position: absolute;
     left: 200px;
     top: 33px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
 }
 
 .img-orders{
@@ -1009,6 +1043,7 @@ body{
     right: 0;
     left: 0;
     margin: auto;
+    border: 2px solid black;
 }
 
 #order-table-topic{

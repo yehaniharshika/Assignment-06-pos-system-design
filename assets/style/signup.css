@@ -2,7 +2,7 @@
 
 .signup{
     width: 600px;
-    height: 680px;
+    height: 700px;
     background-color: #F7E6FE;
     top: 150px;
     bottom: 0;
@@ -12,8 +12,35 @@
     margin: auto;
 }
 
+.signup img{
+    top: -50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+}
+#signup-label-part{
+    width: 600px;
+    height: 80px;
+    background-color: #262A56;
+}
+
+#signup-label-part h2{
+    color: white;
+    position: absolute;
+    left: 240px;
+    top: 26px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bolder;
+    font-style: normal;
+
+}
+
 .Email{
-    top: 180px;
+    top: 250px;
     left: 50px;
     width: 500px;
     height: 50px;
@@ -22,7 +49,7 @@
 }
 
 .Password{
-    top: 300px;
+    top: 380px;
     left: 50px;
     width: 500px;
     height: 50px;
@@ -31,7 +58,7 @@
 }
 
 #email-label{
-    top: 150px;
+    top: 220px;
     left: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -39,7 +66,7 @@
 }
 
 #password-label{
-    top: 270px;
+    top: 350px;
     left: 50px;
     font-size: 18px;
     font-weight: bold;
@@ -47,7 +74,7 @@
 }
 
 #Button{
-    top: 500px;
+    top: 580px;
     left: 0;
     right: 0;
     margin: auto;
@@ -60,13 +87,13 @@
 }
 
 #check-remember{
-    top: 380px;
+    top: 480px;
     left: 90px;
     position: absolute;
 }
 
 .CheckBox{
-    top: 380px;
+    top: 480px;
     left: 80px;
     position: absolute;
 }

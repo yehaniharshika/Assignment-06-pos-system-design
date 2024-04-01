@@ -92,7 +92,7 @@ body{
     position: absolute;
     top: 350px;
     bottom: 0;
-    left: 1000px;
+    left: 900px;
     right: 0;
     margin: auto;
     font-weight: bolder;
@@ -107,13 +107,22 @@ body{
     position: absolute;
     top: 430px;
     bottom: 0;
-    left: 1000px;
+    left: 900px;
     right: 0;
     margin: auto;
     font-weight: bolder;
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 80px;
+}
+
+#header-text{
+    top: 550px;
+    left: 900px;
+    font-family: Ubuntu;
+    font-size: 30px;
+    font-weight: 600;
+    position: absolute;
 }
 
 #customer-part{
@@ -181,7 +190,6 @@ body{
     left: 10px;
     position: absolute;
     top: 10px;
-
 }
 
 #button-add-new-customer{

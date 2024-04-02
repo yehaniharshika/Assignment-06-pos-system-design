@@ -90,7 +90,7 @@ body{
 .main-header1{
     color: #824D96;
     position: absolute;
-    top: 350px;
+    top: 370px;
     bottom: 0;
     left: 900px;
     right: 0;
@@ -105,7 +105,7 @@ body{
 .main-header2{
     color: #824D96;
     position: absolute;
-    top: 430px;
+    top: 470px;
     bottom: 0;
     left: 900px;
     right: 0;
@@ -117,7 +117,7 @@ body{
 }
 
 #header-text{
-    top: 550px;
+    top: 580px;
     left: 900px;
     font-family: Ubuntu;
     font-size: 30px;

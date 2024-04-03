@@ -9,12 +9,12 @@
     list-style: none;
     outline: none;
     scroll-behavior: smooth;
-
 }
 
 :root{
 
 }
+
 
 html{
     overflow-x: hidden;
@@ -28,12 +28,11 @@ body{
 
 .navigation{
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 80px;
     background-color: #824D96;
     position: absolute;
 }
-
 
 .header{
     position: absolute;
@@ -140,7 +139,7 @@ body{
 #customer-label-part{
     width: 1800px;
     height: 100px;
-    background-image: linear-gradient(to right, lightskyblue,#262A56);
+    background-image: linear-gradient(to right, #262A56,lightskyblue);
     top: 0;
     left: 0;
     right: 0;
@@ -378,7 +377,7 @@ body{
 #item-label-part{
     width: 1800px;
     height: 100px;
-    background-image: linear-gradient(to right, lightskyblue,#262A56);
+    background-image: linear-gradient(to right, #262A56,lightskyblue);
     top: 0;
     left: 0;
     right: 0;
@@ -598,7 +597,7 @@ body{
 #order-label-part{
     width: 1800px;
     height: 100px;
-    background-color: #262A56;
+    background-image: linear-gradient(to right, #262A56,lightskyblue);
     top: 0;
     left: 0;
     right: 0;

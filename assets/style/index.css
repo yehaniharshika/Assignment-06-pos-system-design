@@ -9,6 +9,7 @@
     list-style: none;
     outline: none;
     scroll-behavior: smooth;
+
 }
 
 :root{
@@ -77,7 +78,6 @@ body{
     width: 100px;
     font-weight: bold;
     font-size: 18px;
-
 }
 
 .logout-button{
@@ -1069,3 +1069,398 @@ body{
     font-size: 18px;
     font-weight: 600;
 }
+
+
+@media all and (max-width: 768px) {
+    #customer-part{
+        width: 650px;
+        height: 1200px;
+        top: 1000px;
+        left: 0;
+        right: 0;
+
+    }
+
+    #customer-label-part{
+        width: 650px;
+        height: 100px;
+
+    }
+
+    .navigation{
+        top: 0;
+        width: 768px;
+        height: 80px;
+        margin-left: 0;
+    }
+
+    .navbar a{
+        font-size: 20px ;
+        font-weight: 600;
+        color: black;
+        padding: 10px;
+        transition: 1s;
+    }
+
+    .navbar a:hover,
+    .navbar a.active{
+        color: darkblue;
+    }
+
+    .main-img{
+        top: 150px;
+        position: absolute;
+        width: 3000px;
+        height: 3000px;
+        left: 150px;
+    }
+
+
+    .signup-button{
+        border-radius: 20px;
+        width: 100px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .logout-button{
+        border-radius: 20px;
+        top: 320px;
+        left: 10px;
+        position: absolute;
+        width: 100px;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .main-header1{
+        color: #824D96;
+        position: absolute;
+        top: 600px;
+        bottom: 0;
+        left: 180px;
+        right: 0;
+        margin: auto;
+        font-weight: bolder;
+        font-family: "Jost", sans-serif;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 50px;
+    }
+
+    .main-header2{
+        color: #824D96;
+        position: absolute;
+        top: 680px;
+        bottom: 0;
+        left: 180px;
+        right: 0;
+        margin: auto;
+        font-weight:bolder;
+        font-optical-sizing: auto;
+        font-style: normal;
+        font-size: 50px;
+        font-family: "Jost", sans-serif;
+    }
+
+    #header-text{
+        top: 780px;
+        left: 180px;
+        font-family: Ubuntu;
+        font-size: 20px;
+        font-weight: 600;
+        position: absolute;
+    }
+
+    #search-part{
+        top: 250px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 600px;
+        height: 300px;
+
+    }
+
+    #search-label-part{
+        width: 600px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        background-color: #824D96;
+    }
+
+    #search-label-part h4{
+        color: white;
+        left: 10px;
+        position: absolute;
+        top: 10px;
+    }
+
+    #button-add-new-customer{
+        width: 230px;
+        top: 150px;
+        left: 70px;
+        position: absolute;
+        border: 5px solid red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #button-view-customer{
+        width: 230px;
+        top: 150px;
+        left: 350px;
+        position: absolute;
+        border: 5px solid gray;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .customer-search-text-field{
+        background-color: white;
+        top: 100px;
+        width: 450px;
+        left: 30px;
+        height: 50px;
+        font-size: 19px;
+        font-weight: 500;
+        position: absolute;
+        border: 2px solid black;
+    }
+
+    .tbl-customer{
+        top: 600px;
+        width: 600px;
+        height: 200px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        border: 2px solid black;
+        font-size: 14px;
+    }
+
+    /*item*/
+
+    #item-part{
+        width: 650px;
+        height: 1200px;
+        background-color: #F7E6FE;
+        top: 2500px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    #item-label-part{
+        width: 650px;
+        height: 100px;
+        background-color: #262A56;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    #item-label-part h2{
+        color: white;
+        position: absolute;
+        left: 180px;
+        top: 33px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        font-style: normal;
+    }
+
+    .img-item{
+        color: white;
+        font-size: 30px;
+        top: 35px;
+        left: 130px;
+        position: absolute;
+    }
+
+    #item-search-part{
+        top: 250px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 600px;
+        height: 300px;
+        position: absolute;
+        background-color: white;
+    }
+
+    #item-search-label-part{
+        width: 600px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        background-color: #824D96;
+    }
+
+    #item-search-label-part h4{
+        color: white;
+        left: 10px;
+        position: absolute;
+        top: 10px;
+    }
+
+    .item-search-text-field{
+        background-color: white;
+        top: 100px;
+        width: 450px;
+        left: 30px;
+        height: 50px;
+        font-size: 19px;
+        font-weight: 500;
+        position: absolute;
+        border: 2px solid black;
+    }
+
+    #button-add-new-item{
+        width: 230px;
+        top: 150px;
+        left: 70px;
+        position: absolute;
+        border: 5px solid red;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #button-view-item{
+        width: 230px;
+        top: 150px;
+        left: 350px;
+        position: absolute;
+        border: 5px solid grey;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    #item-table-topic{
+        font-weight: 600;
+        font-size: 20px;
+        color: blue;
+    }
+
+    /*place orders*/
+    #order-part{
+        width: 650px;
+        height: 3800px;
+        background-color: #F7E6FE;
+        top: 4000px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    #order-label-part{
+        width: 650px;
+        height: 100px;
+        background-color: #262A56;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+
+    #order-label-part h2{
+        color: white;
+        position: absolute;
+        left: 200px;
+        top: 33px;
+        font-family: "Josefin Sans", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: bolder;
+        font-style: normal;
+    }
+
+    .img-orders{
+        color: white;
+        font-size: 30px;
+        top: 35px;
+        left: 150px;
+        position: absolute;
+    }
+
+    #invoice-details{
+        top: 150px;
+        left: 80px;
+        width: 500px;
+        height: 1000px;
+        position: absolute;
+        background-color: white;
+    }
+
+    #select-item{
+        top: 1250px;
+        left: 80px;
+        width: 500px;
+        height: 1000px;
+        position: absolute;
+        background-color: white;
+    }
+
+    #order-detail{
+        top: 2700px;
+        left: 80px;
+        width: 500px;
+        height: 1000px;
+        position: absolute;
+        background-color: #F0CCFD;
+    }
+
+    .tbl-order{
+        top: 2330px;
+        width: 600px;
+        height: 220px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: auto;
+        border: 2px solid black;
+    }
+
+    #order-table-topic{
+        font-weight: 600;
+        font-size: 20px;
+        color: blue;
+    }
+
+    #footer-part{
+        top: 3800px;
+        position: absolute;
+        left: 900px;
+        bottom: 10px;
+        margin: auto;
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+}
+
+
+@media all and (max-width: 375px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

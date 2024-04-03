@@ -134,12 +134,13 @@ body{
     right: 0;
     margin: auto;
     position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #customer-label-part{
     width: 1800px;
     height: 100px;
-    background-color: #262A56;
+    background-image: linear-gradient(to right, lightskyblue,#262A56);
     top: 0;
     left: 0;
     right: 0;
@@ -371,12 +372,13 @@ body{
     right: 0;
     margin: auto;
     position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #item-label-part{
     width: 1800px;
     height: 100px;
-    background-color: #262A56;
+    background-image: linear-gradient(to right, lightskyblue,#262A56);
     top: 0;
     left: 0;
     right: 0;
@@ -589,6 +591,8 @@ body{
     right: 0;
     margin: auto;
     position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
 }
 
 #order-label-part{
@@ -1079,6 +1083,7 @@ body{
         left: 0;
         right: 0;
 
+
     }
 
     #customer-label-part{
@@ -1252,6 +1257,8 @@ body{
         right: 0;
         margin: auto;
         position: absolute;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
     }
 
     #item-label-part{

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../assets/normalize.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/customer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../fontawesome-free-6.5.1-web/css/all.min.css">
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid navigation">
+            <img src="../images/foodmartlogo.png" alt="Bootstrap" width="60" height="60">
+            <a class="navbar-brand" href="#">FOOD MART</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item item">
+                        <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="customer.html">Customer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="item.html">Items</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="placeOrder.html">Orders</a>
+                    </li>
+
+                </ul>
+                <a href="signup.html"><button type="button" class="btn btn-warning logout-button">Logout</button></a>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main-part container">
+    <section class="row">
+        <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div id="customer-part">
+                <div id="customer-label-part">
+                    <div>
+                        <i class="fa-solid fa-users img-customer"></i>
+                    </div>
+                    <h2 id="customer">CUSTOMER MANAGEMENT</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <button type="button" class="btn btn-outline-danger" id="button-add-new-customer"  data-bs-toggle="modal" data-bs-target="#addCustomerModal">+ Add new customer</button>
+            <button type="button" class="btn btn-outline-secondary" id="button-view-customer"  data-bs-toggle="modal" data-bs-target="#exampleModal"> View all customers</button>
+        </section>
+
+        <section>
+            <!--customer modal-->
+            <div class="modal fade" id="addCustomerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel addCustomerLabel">Customer Registration Form</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body cus-card">
+                            <!--customer add form-->
+                            <form>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInputModal" class="form-label label-customerID">customer ID</label>
+                                    <input type="text" class="form-control input-id" id="formGroupExampleInputModalId" placeholder="Enter customer ID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInputModal" class="form-label label-customerName">customer Name</label>
+                                    <input type="text" class="form-control name-text" id="formGroupExampleInputModal" placeholder="Enter customer Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1Modal" class="form-label label-customerAddress">customer Address</label>
+                                    <textarea class="form-control text-address" id="exampleFormControlTextarea1Modal" placeholder="Enter address" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2Modal" class="form-label label-customerTel">phone number</label>
+                                    <input type="tel" class="form-control telNumber" id="formGroupExampleInput2Modal" placeholder="Enter phone number">
+                                </div>
+
+                                <br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-from">Close</button>
+                            <button type="button" class="btn btn-primary" id="customer-save">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="modal fade" id="customerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel updateDeleteCustomerLabel">Customer Form</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body cus-card">
+                            <!--customer search form-->
+                            <form>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInputModal" class="form-label label-customerID">customer ID</label>
+                                    <input type="text" class="form-control input-id" id="formGroupExampleInputModalCustomerId" placeholder="Enter customer ID">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInputModal" class="form-label label-customerName">customer Name</label>
+                                    <input type="text" class="form-control name-text" id="formGroupExampleInputModalName" placeholder="Enter customer Name">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleFormControlTextarea1Modal" class="form-label label-customerAddress">customer Address</label>
+                                    <textarea class="form-control text-address" id="exampleFormControlTextarea1ModalAddress" placeholder="Enter address" rows="3"></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2Modal" class="form-label label-customerTel">phone number</label>
+                                    <input type="tel" class="form-control telNumber" id="formGroupExampleInput2ModalTelNumber" placeholder="Enter phone number">
+                                </div>
+
+                                <br>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="customer-close">Close</button>
+                            <button type="button" class="btn btn-warning" id="customer-update">update</button>
+                            <button type="button" class="btn btn-primary" id="customer-delete">delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" search-customer col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div id="search-part">
+                <div id="search-label-part">
+                    <h4>search customer</h4>
+                </div>
+
+                <div class="card-body">
+                    <form>
+                        <input class="form-control customer-search-text-field" type="text" placeholder="input customer ID/customer Name here..." aria-label="readonly input example" readonly>
+
+                        <button type="button" class="btn btn-danger btn-customer-search"  data-bs-toggle="modal" data-bs-target="#customerModal">search</button>
+
+                        <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                            <option selected>customer Name</option>
+                            <option value="1">Yehani Harshika</option>
+                            <option value="2">Rumesh Chamoda</option>
+                            <option value="3">Pavindu Eranga</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="customer-table-view col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10" >
+            <table class="table caption-top tbl-customer">
+                <caption id="table-topic">List of customers</caption>
+                <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">customer ID</th>
+                    <th scope="col">customer name</th>
+                    <th scope="col">address</th>
+                    <th scope="col">phone number</th>
+                    <th scope="col">salary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>C-001</td>
+                    <td>Yehani Harshika</td>
+                    <td>Polonnaruwa</td>
+                    <td>076-4450928</td>
+                    <td>30000</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>C-002</td>
+                    <td>Pavindu Eranga</td>
+                    <td>Panadura</td>
+                    <td>076-8371849</td>
+                    <td>25000</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>C-003</td>
+                    <td>Dewmini Pabasara</td>
+                    <td>2/R, Gonapala</td>
+                    <td>0782323123</td>
+                    <td>50000</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">7</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th scope="row">8</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+</html>

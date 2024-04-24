@@ -10,13 +10,13 @@
     <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../style/dashboard.css">
     <link rel="stylesheet" href="../../assets/normalize.css">
+    <link rel="stylesheet" href="../style/placeOrder.css">
 </head>
 <body>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <img src="../images/foodmartlogo.png" alt="Bootstrap" width="60" height="60">
-            <h2 id="logo-name">Food Mart-Fast Shopping</h2>
+            <h2 id="logo-name">FOOD MART</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -36,12 +36,122 @@
                     </li>
 
                 </ul>
-                <a href="signup.html"><button type="button" class="btn btn-warning logout-button">Logout</button></a>
+                <a href="signup.html" class="btn btn-outline-primary log-out-btn">LogOut</a>
             </div>
         </div>
     </nav>
 </header>
 
+<main class="main-part container">
+
+    <section class="row">
+
+        <!--<div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <p id="header-text">
+                Step into Sri Lanka's freshest food mart for
+                all your grocery needs From 100% fresh to
+                frozen and everything in between is now easily
+                available to you....
+            </p>
+        </div>-->
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card card-size count-card-style ">
+                <div class="card-body">
+                    <h2 class="card-title text-center cus-card-style">Today Income</h2>
+                    <br>
+                    <h3 class="text-center cus-card-style" style="color: black">130000</h3>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card card-size count-card-style ">
+                <div class="card-body">
+                    <h2 class="card-title text-center cus-card-style">Today's Expense</h2>
+                    <br>
+                    <h3 class="text-center cus-card-style" style="color: black">12000</h3>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+            <div class="card card-size count-card-style ">
+                <div class="card-body">
+                    <h2 class="card-title text-center cus-card-style">Today's Profit</h2>
+                    <br>
+                    <h3 class="text-center cus-card-style" style="color: black">118000</h3>
+                    <br>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 bar-chart-style" >
+            <div class="card card-progress cus-bar-card">
+
+                <h3 class="card-header text-center" style="color: red">Weekday Sales percentage</h3>
+
+                <div class="card-body">
+                    <div class="progress-bars">
+
+                        <label for="mon" class="day-text">Monday</label>
+                        <div id="mon" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 25%">25%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="tue" class="day-text">Tuesday</label>
+                        <div id="tue" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="wed" class="day-text">Wednesday</label>
+                        <div id="wed" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 35%">35%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="thu"  class="day-text">Thursday</label>
+                        <div id="thu" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 80%">80%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="fri" class="day-text">Friday</label>
+                        <div id="fri" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 50%">50%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="sat" class="day-text">Saturday</label>
+                        <div id="sat" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar bg-info text-dark" style="width: 30%">30%</div>
+                        </div>
+
+                        <br>
+
+                        <label for="sun" class="day-text">Sunday</label>
+                        <div id="sun" class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                            <div class="progress-bar  progress-bar-color bg-info text-dark" style="width: 20%">20%</div>
+                        </div>
+
+                        <br>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

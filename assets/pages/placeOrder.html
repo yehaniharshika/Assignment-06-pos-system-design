@@ -15,8 +15,7 @@
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-
-            <h2 id="logo-name">Fast Shopping</h2>
+            <h2 id="logo-name">FOOD MART</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -42,18 +41,19 @@
     </nav>
 </header>
 
+
 <main class="main-part container">
     <section class="row">
         <section class=" row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 main-header">
-            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class=" place-order col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
                 <h1>
-                    <img src="../assets/images/order.png" alt="Bootstrap" width="50" height="50">
+                    <i class="fa-solid fa-cart-shopping img-orders"></i>
                     Place Orders
                 </h1>
             </div>
             <div class="text-end col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <button type="button" class="btn btn-primary background-colour" data-bs-toggle="modal" data-bs-target="#exampleModal">View All Orders</button>
-                <button type="button" class="btn btn-success search-background-colour" data-bs-toggle="modal" data-bs-target="#exampleModal1">Search Orders</button>
+                <button type="button" class="btn btn-primary btn-view-all-orders" data-bs-toggle="modal" data-bs-target="#exampleModal">View All Orders</button>
+                <button type="button" class="btn btn-success search-orders" data-bs-toggle="modal" data-bs-target="#exampleModal1">Search Orders</button>
             </div>
         </section>
 
@@ -66,11 +66,11 @@
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Order ID</label>
-                            <input type="text" class="form-control" id="inputEmail4">
+                            <input type="text" class="form-control input-OrderId" id="inputEmail4">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Order Date</label>
-                            <input type="date" class="form-control" id="inputPassword2">
+                            <input type="date" class="form-control input-Date" id="inputPassword2">
                         </div>
 
                         <div class="col-md-6">
@@ -85,11 +85,11 @@
 
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Customer Name</label>
-                            <input type="text" class="form-control" id="inputPassword4">
+                            <input type="text" class="form-control customer-name-set" id="inputPassword4">
                         </div>
                         <div class="col-12">
                             <label for="inputAddress" class="form-label">Customer Address</label>
-                            <input type="text" class="form-control" id="inputAddress">
+                            <input type="text" class="form-control customer-address-set" id="inputAddress">
                         </div>
                     </form>
 
@@ -98,37 +98,37 @@
         </section>
 
         <section class="Order_Details_Form col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-            <div class="card cardSize">
+            <div class="card cardSize-item">
                 <div id=" " class="card-header Card-header-colour">
                     Item Details
                 </div>
-                <div class="card-body">
+                <div class="card-body select-item-card">
                     <form class="row g-3">
                         <div class="col-md-6">
                             <label for="inputState" class="form-label">Item Code</label>
-                            <select id="inputState" class="form-select">
-                                <option selected>Choose...</option>
+                            <select id="inputState" class="form-select set-item-code">
+                                <option selected>select Item code</option>
                                 <option>...</option>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Item Name</label>
-                            <input type="text" class="form-control" id="inputPassword1">
+                            <input type="text" class="form-control set-item-name" id="inputPassword1">
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Unit Price</label>
-                            <input type="number" class="form-control" id="inputEmail1 ">
+                            <input type="number" class="form-control set-Item-price" id="inputEmail1 ">
                         </div>
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Item Quantity</label>
-                            <input type="number" class="form-control" id="inputPassword5">
+                            <input type="number" class="form-control set-qty" id="inputPassword5">
                         </div>
                         <div class="mb-3">
                             <label for="Input2ModalOrderQty" class="form-label label-setOrderQty">Order Quantity</label>
                             <input type="number" class="form-control set-OrderQty" id="Input2ModalOrderQty" placeholder="Enter Order Quantity">
                         </div>
                         <div class="col-12 text-end">
-                            <button type="submit" class="btn btn-warning">Add to cart</button>
+                            <button type="submit" class="btn btn-warning btn-add-to-cart">Add to cart</button>
                         </div>
                     </form>
                 </div>
@@ -141,37 +141,37 @@
                     <form class="row g-3">
                         <div class="row g-3 align-items-center">
                             <div class="col-auto">
-                                <label for="inputPassword6" class="col-form-label"><h4 id="total-label">Total :</h4></label>
+                                <label for="inputPassword6" class="col-form-label"><h4 id="total-label">Total Price:</h4></label>
                             </div>
                             <div class="col-auto">
-                                <input type="number" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
+                                <input type="number" id="inputPassword6" class="form-control input-TotalPrice" aria-describedby="passwordHelpInline">
                             </div>
                         </div>
 
                         <div class="row g-3 align-items-center">
                             <div class="col-auto">
-                                <label for="inputPassword6" class="col-form-label"><h4 id="sub-total-label">Sub Total :</h4></label>
+                                <label for="inputPassword6" class="col-form-label"><h4 id="sub-total-label">Sub Total Price:</h4></label>
                             </div>
                             <div class="col-auto">
-                                <input type="number" id="inputPassword" class="form-control" aria-describedby="passwordHelpInline">
+                                <input type="number" id="inputPassword" class="form-control input-SubTotalPrice" aria-describedby="passwordHelpInline">
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <label for="inputPassword4" class="form-label">Cash :</label>
-                            <input type="number" class="form-control" id="inputPassword10">
+                            <input type="number" class="form-control input-cash" id="inputPassword10">
                         </div>
                         <div class="col-md-6">
                             <label for="inputEmail4" class="form-label">Discount :</label>
-                            <input type="number" class="form-control" id="inputEmail10">
+                            <input type="number" class="form-control input-discount" id="inputEmail10">
                         </div>
                         <div class="col-md-10">
                             <label for="inputPassword4" class="form-label">Balance :</label>
-                            <input type="number" class="form-control" id="inputPassword50">
+                            <input type="number" class="form-control input-balance" id="inputPassword50">
                         </div>
 
                         <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary">Purchase</button>
+                            <button type="submit" class="btn btn-success btn-purchase">Purchase Order</button>
                         </div>
                     </form>
                 </div>
@@ -192,7 +192,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">1</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -202,7 +202,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">2</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -212,7 +212,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">3</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -222,7 +222,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">4</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -232,7 +232,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">5</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -242,7 +242,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <th scope="row"></th>
+                    <th scope="row">6</th>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -308,70 +308,70 @@
                             </thead>
                             <tbody>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">1</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">2</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">3</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">4</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">5</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">6</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">7</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">8</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">9</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                                 <td></td>
                             </tr>
                             <tr>
-                                <th scope="row"></th>
+                                <th scope="row">10</th>
                                 <td></td>
                                 <td></td>
                                 <td></td>
@@ -489,7 +489,7 @@
     </section>
 
 </main>
-
+<script src="../fontawesome-free-6.5.1-web/js/all.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

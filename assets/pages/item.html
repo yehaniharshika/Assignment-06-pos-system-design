@@ -5,7 +5,7 @@
     <title>Title</title>
     <link rel="stylesheet" href="../../assets/normalize.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../style/customer.css">
+    <link rel="stylesheet" href="../style/item.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&display=swap" rel="stylesheet">
@@ -14,15 +14,14 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid navigation">
-            <img src="../images/foodmartlogo.png" alt="Bootstrap" width="60" height="60">
-            <a class="navbar-brand" href="#">FOOD MART</a>
+        <div class="container-fluid">
+            <h2 id="logo-name">FOOD MART</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item item">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -36,7 +35,7 @@
                     </li>
 
                 </ul>
-                <a href="signup.html"><button type="button" class="btn btn-warning logout-button">Logout</button></a>
+                <a href="signup.html" class="btn btn-outline-primary log-out-btn">LogOut</a>
             </div>
         </div>
     </nav>
@@ -45,19 +44,19 @@
 <main class="main-part container">
     <section class="row">
         <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div id="item-part">
-                <div id="item-label-part">
-                    <div>
+            <div class="item-part">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1>
                         <i class="fa-solid fa-business-time img-item"></i>
-                    </div>
-                    <h2 id="item">ITEM MANAGEMENT</h2>
+                        Manage item
+                    </h1>
                 </div>
             </div>
         </section>
 
         <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <button type="button" class="btn btn-outline-danger" id="button-add-new-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">+ Add new item</button>
-            <button type="button" class="btn btn-outline-secondary" id="button-view-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">View all item</button>
+            <button type="button" class="btn btn-outline-primary" id="button-view-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">View all item</button>
         </section>
 
         <section>
@@ -143,22 +142,26 @@
             </div>
         </section>
 
-        <section class=" search-customer col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div id="item-search-part">
-                <div id="item-search-label-part">
-                    <h4>search items</h4>
+        <section class=" search-item col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="card cardSize-item">
+                <div id=" " class="card-header Card-header-colour">
+                    search item
                 </div>
-                <input class="form-control item-search-text-field" type="text" placeholder="Input Item code/item name here..." aria-label="readonly input example" readonly>
 
-                <button type="button" class="btn btn-danger btn-item-search"  data-bs-toggle="modal" data-bs-target="#ItemModal">search</button>
+                <div class="card-body">
+                    <form>
+                        <input class="form-control item-search-text-field" type="text" placeholder="Input Item code/item name here..." aria-label="readonly input example" readonly>
+                        <button type="button" class="btn btn-success btn-item-search"  data-bs-toggle="modal" data-bs-target="#ItemModal">search</button>
+                    </form>
+                </div>
 
-                <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                <!--<select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
                     <option selected>Item code</option>
                     <option value="1">I-001</option>
                     <option value="2">I-002</option>
                     <option value="3">I-003</option>
                     <option value="3">I-004</option>
-                </select>
+                </select>-->
             </div>
         </section>
 

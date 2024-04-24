@@ -1,0 +1,146 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right,#a882b6,#F0CCFD);
+}
+
+html{
+    overflow-x: hidden;
+}
+
+#logo-name{
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+    margin: 0 5px;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    z-index: 1000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.log-out-btn {
+    margin-right: 20px;
+}
+
+.item-part>div>h1{
+    position: absolute;
+    margin-top: 5rem;
+    font-weight: bolder;
+}
+
+#button-add-new-item{
+    border: 4px solid red;
+    color: #E51824;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 10rem;
+}
+
+#button-add-new-item:hover{
+    color: #eeeeee;
+}
+
+#button-view-item{
+    border: 4px solid blue;
+    color: blue;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 10rem;
+    margin-left: 2rem;
+}
+
+#button-view-item:hover{
+    color: #eeeeee;
+}
+
+.item-card{
+    max-width: 600px;
+    margin-top: 50px;
+    height: 600px;
+    background-color: lightskyblue;
+}
+
+.label-ItemCode{
+    top: 20px;
+    position: absolute;
+}
+
+.label-ItemName{
+    top: 140px;
+    position: absolute;
+}
+
+.label-ItemPrice{
+    top: 260px;
+    position: absolute;
+}
+
+.label-ItemQty{
+    top: 380px;
+    position: absolute;
+}
+
+.input-code{
+    top: 50px;
+    left: 18px;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    border: 2px solid darkblue;
+}
+.input-item{
+    top: 170px;
+    left: 18px;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    border: 2px solid darkblue;
+}
+
+.input-price{
+    top: 290px;
+    left: 18px;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    border: 2px solid darkblue;
+}
+
+.input-qty{
+    top: 410px;
+    left: 18px;
+    position: absolute;
+    width: 450px;
+    height: 50px;
+    border: 2px solid darkblue;
+}
+
+.search-item{
+    margin-top: 2rem;
+}
+
+.Card-header-colour{
+    background: #133a75;
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.item-search-text-field{
+    border: 2px solid black;
+}
+
+
+.btn-item-search{
+    margin-top: 2rem;
+}
+
+.customer-table-view{
+    margin-top: 4rem;
+}

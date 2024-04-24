@@ -1,3 +1,15 @@
+
+body{
+    width: 100vw;
+    height: 100vh;
+    /*background: linear-gradient(to right,  #78bc73 1%,#d8d8d8 6%,#d8d8d8 14%,#78bc73 18%,#d8d8d8 24%,#d8d8d8 34%,#d8d8d8 34%,#78bc73 40%,#d8d8d8 44%,#ffffff 54%,#d8d8d8 68%,#78bc73 74%,#c2c4c2 86%,#85c66b 89%,#f6f6f6 100%);*/
+    /*background-color: #a882b6;*/
+    background: linear-gradient(to right,#a882b6,#F0CCFD);
+}
+
+html{
+    overflow-x: hidden;
+}
 #logo-name {
     color: orangered;
     margin: 0 5px;
@@ -18,9 +30,19 @@ header {
     margin: 1rem 0;
 }
 
-.background-colour {
-    /*background-color: #72bdff;*/
+.place-order>h1{
+    font-weight: bolder;
+}
+.btn-view-all-orders{
     background-color: #133a75;
+    margin-top: 4rem;
+    font-weight: 600;
+}
+
+.search-orders{
+    background-color: red;
+    margin-top: 4rem;
+    font-weight: 600;
 }
 
 .main-part {
@@ -30,6 +52,9 @@ header {
 
 .Card-header-colour {
     background-color: #824D96;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 .Order-Details {
@@ -71,11 +96,6 @@ header {
     margin-top: 20px;
     border: 1px solid darkgray;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-
-}
-
-.search-background-colour {
-    background-color: #24872c;
 }
 
 .search-card-style {
@@ -92,4 +112,88 @@ header {
 
 .invoice-card{
     background-color: #F0CCFD;
+    height: 342px;
+}
+
+#logo-name{
+    font-family: Ubuntu;
+    font-size: 18px;
+    font-weight: bold;
+    color: red;
+}
+
+#invoice-details-header{
+    color: white;
+}
+
+.input-Date{
+    border: 2px solid black;
+}
+
+.input-OrderId{
+    border: 2px solid black;
+}
+
+.customer-address-set{
+    border: 2px solid black;
+}
+
+.customer-name-set{
+    border: 2px solid black;
+}
+
+.load-customer-Id{
+    border: 2px solid black;
+}
+
+.select-item-card{
+    background-color: #F0CCFD;
+}
+
+.set-OrderQty{
+    border: 2px solid black;
+}
+
+.set-qty{
+    border: 2px solid black;
+}
+
+.set-item-code{
+    border: 2px solid black;
+}
+
+.set-item-name{
+    border: 2px solid black;
+}
+
+.set-Item-price{
+    border: 2px solid black;
+}
+
+.input-balance{
+    border: 2px solid black;
+}
+
+.input-cash{
+    border: 2px solid black;
+}
+
+.input-discount{
+    border: 2px solid black;
+}
+
+.input-TotalPrice{
+    border: 2px solid black;
+}
+
+.input-SubTotalPrice{
+    border: 2px solid black;
+}
+.btn-purchase{
+    font-weight: 600;
+    border-radius: 20px;
+}
+.btn-add-to-cart{
+    font-weight: 600;
+    border-radius: 20px;
 }

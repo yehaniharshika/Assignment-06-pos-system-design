@@ -14,15 +14,14 @@
 <body>
 <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid navigation">
-            <img src="../images/foodmartlogo.png" alt="Bootstrap" width="60" height="60">
-            <a class="navbar-brand" href="#">FOOD MART</a>
+        <div class="container-fluid">
+            <h2 id="logo-name">FOOD MART</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item item">
+                    <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="dashboard.html">Home</a>
                     </li>
                     <li class="nav-item">
@@ -36,28 +35,29 @@
                     </li>
 
                 </ul>
-                <a href="signup.html"><button type="button" class="btn btn-warning logout-button">Logout</button></a>
+                <a href="signup.html" class="btn btn-outline-primary log-out-btn">LogOut</a>
             </div>
         </div>
     </nav>
 </header>
 
+
 <main class="main-part container">
     <section class="row">
         <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div id="customer-part">
-                <div id="customer-label-part">
-                    <div>
+            <div class="customer-part">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <h1>
                         <i class="fa-solid fa-users img-customer"></i>
-                    </div>
-                    <h2 id="customer">CUSTOMER MANAGEMENT</h2>
+                        Manage Customer
+                    </h1>
                 </div>
             </div>
         </section>
 
         <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <button type="button" class="btn btn-outline-danger" id="button-add-new-customer"  data-bs-toggle="modal" data-bs-target="#addCustomerModal">+ Add new customer</button>
-            <button type="button" class="btn btn-outline-secondary" id="button-view-customer"  data-bs-toggle="modal" data-bs-target="#exampleModal"> View all customers</button>
+            <button type="button" class="btn btn-outline-primary" id="button-view-customer"  data-bs-toggle="modal" data-bs-target="#exampleModal"> View all customers</button>
         </section>
 
         <section>
@@ -143,23 +143,23 @@
         </section>
 
         <section class=" search-customer col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <div id="search-part">
-                <div id="search-label-part">
-                    <h4>search customer</h4>
+            <div class="card cardSize-customer">
+                <div id=" " class="card-header Card-header-colour">
+                    search customer
                 </div>
 
                 <div class="card-body">
                     <form>
                         <input class="form-control customer-search-text-field" type="text" placeholder="input customer ID/customer Name here..." aria-label="readonly input example" readonly>
 
-                        <button type="button" class="btn btn-danger btn-customer-search"  data-bs-toggle="modal" data-bs-target="#customerModal">search</button>
+                        <button type="button" class="btn btn-success btn-customer-search"  data-bs-toggle="modal" data-bs-target="#customerModal">search</button>
 
-                        <select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
+                        <!--<select class="form-select form-select-lg mb-3 customer-name-box" aria-label="Large select example">
                             <option selected>customer Name</option>
                             <option value="1">Yehani Harshika</option>
                             <option value="2">Rumesh Chamoda</option>
                             <option value="3">Pavindu Eranga</option>
-                        </select>
+                        </select>-->
                     </form>
                 </div>
             </div>

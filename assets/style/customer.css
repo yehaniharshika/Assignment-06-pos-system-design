@@ -1,205 +1,36 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    border: none;
-    text-decoration: none;
-    list-style: none;
-    outline: none;
-    scroll-behavior: smooth;
+body{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right,#a882b6,#F0CCFD);
 }
-
-:root{
-
-}
-
 
 html{
     overflow-x: hidden;
 }
 
-
-body{
-    overflow: hidden;
-}
-
-.logout-button{
-    border-radius: 20px;
-    width: 100px;
-    font-weight: bold;
+#logo-name{
+    font-family: Ubuntu;
     font-size: 18px;
-}
-
-.navigation{
-    top: 0;
-    width: 100%;
-    height: 80px;
-    background-color: #824D96;
-    position: absolute;
+    font-weight: bold;
+    color: red;
+    margin: 0 5px;
 }
 
 header {
     position: fixed;
     width: 100vw;
     z-index: 1000;
-    background-color: #824D96;
-}
-
-.header{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100vw;
-    height: 10px;
-    background-color: #824D96;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.navbar a{
-    font-size: 20px ;
-    font-weight: 600;
-    color: black;
-    padding: 10px;
-    transition: 1s;
-}
-
-.item a:hover,
-.item a.active{
-    color: #824D96;
-}
-
-#customer-part{
-    width: 1800px;
-    height: 1200px;
-    background-color: #F7E6FE;
-    top: 120px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-#customer-label-part{
-    width: 1800px;
-    height: 100px;
-    background-image: linear-gradient(to right, #262A56,lightskyblue);
-    top: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    position: absolute;
+.log-out-btn {
+    margin-right: 20px;
 }
 
-#customer-label-part h2{
-    color: white;
-    position: absolute;
-    left: 200px;
-    top: 33px;
-    font-family: "Josefin Sans", sans-serif;
-    font-optical-sizing: auto;
+.customer-part>div>h1{
+    margin-top: 8rem;
     font-weight: bolder;
-    font-style: normal;
 }
-
-.img-customer{
-    color: white;
-    font-size: 30px;
-    top: 35px;
-    left: 150px;
-    position: absolute;
-}
-
-#search-part{
-    top: 350px;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 1400px;
-    height: 300px;
-    position: absolute;
-    background-color: white;
-}
-
-#search-label-part{
-    width: 1400px;
-    height: 50px;
-    position: absolute;
-    top: 0;
-    background-color: #824D96;
-}
-
-#search-label-part h4{
-    color: white;
-    left: 10px;
-    position: absolute;
-    top: 10px;
-}
-
-#button-add-new-customer{
-    width: 230px;
-    top: 260px;
-    left: 250px;
-    position: absolute;
-    border: 5px solid red;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-#button-view-customer{
-    width: 230px;
-    top: 260px;
-    left: 520px;
-    position: absolute;
-    border: 5px solid gray;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.customer-name-box{
-    position: absolute;
-    top: 210px;
-    left: 180px;
-    width: 300px;
-    border: 2px solid black;
-}
-
-.btn-customer-search{
-    top: 210px;
-    left: 30px;
-    width: 120px;
-    height: 45px;
-    font-size: 18.5px;
-    font-weight: bold;
-    position: absolute;
-}
-
-.customer-search-text-field{
-    background-color: white;
-    top: 100px;
-    width: 700px;
-    left: 30px;
-    height: 50px;
-    font-size: 19px;
-    font-weight: 500;
-    position: absolute;
-    border: 2px solid black;
-}
-
-.tbl-customer{
-    top: 750px;
-    width: 1400px;
-    height: 200px;
-    position: absolute;
-    right: 0;
-    left: 0;
-    margin: auto;
-    border: 2px solid black;
-}
-
 .cus-card{
     max-width: 800px;
     margin-top: 50px;
@@ -262,142 +93,54 @@ header {
     position: absolute;
 }
 
-#customer-save{
-    font-weight: bold;
-    font-size: 18px;
-    width: 120px;
-    height: 50px;
-    border-radius: 35px;
-}
-
-#close-from{
-    font-weight: bold;
-    font-size: 18px;
-    width: 120px;
-    height: 50px;
-    border-radius: 35px;
-}
-
-#customer-delete{
-    background-color: #B53471;
-    font-weight: bold;
-    font-size: 18px;
-    width: 120px;
-    height: 50px;
-    border-radius: 35px;
-}
-
-#customer-close{
-    font-weight: bold;
-    font-size: 18px;
-    width: 120px;
-    height: 50px;
-    border-radius: 35px;
-}
-
-#customer-update{
-    font-weight: bold;
-    font-size: 18px;
-    width: 120px;
-    height: 50px;
-    border-radius: 35px;
-}
-
-#table-topic{
+#button-add-new-customer{
+    border: 4px solid red;
+    color: #E51824;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 17px;
+    margin-top: 3rem;
+}
+
+#button-add-new-customer:hover{
+    color: #eeeeee;
+}
+
+#button-view-customer{
+    border: 4px solid blue;
     color: blue;
+    font-weight: 600;
+    font-size: 17px;
+    margin-top: 3rem;
+    margin-left: 2rem;
 }
 
-@media all and (max-width: 768px) {
-    #customer-part{
-        width: 650px;
-        height: 1200px;
-        top: 100px;
-        left: 0;
-        right: 0;
-    }
-
-    #customer-label-part{
-        width: 650px;
-        height: 100px;
-
-    }
-
-    .logout-button{
-        border-radius: 20px;
-        top: 320px;
-        left: 10px;
-        position: absolute;
-        width: 100px;
-        font-weight: bold;
-        font-size: 18px;
-    }
-
-    #header-text{
-        top: 780px;
-        left: 180px;
-        font-family: Ubuntu;
-        font-size: 20px;
-        font-weight: 600;
-        position: absolute;
-    }
-
-    #search-part{
-        top: 250px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 600px;
-        height: 300px;
-
-    }
-
-    #search-label-part{
-        width: 600px;
-        height: 50px;
-        position: absolute;
-        top: 0;
-        background-color: #824D96;
-    }
-
-    #search-label-part h4{
-        color: white;
-        left: 10px;
-        position: absolute;
-        top: 10px;
-    }
-
-    #button-add-new-customer{
-        width: 230px;
-        top: 150px;
-        left: 70px;
-        position: absolute;
-        border: 5px solid red;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    #button-view-customer{
-        width: 230px;
-        top: 150px;
-        left: 350px;
-        position: absolute;
-        border: 5px solid gray;
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    .customer-search-text-field{
-        background-color: white;
-        top: 100px;
-        width: 450px;
-        left: 30px;
-        height: 50px;
-        font-size: 19px;
-        font-weight: 500;
-        position: absolute;
-        border: 2px solid black;
-    }
+#button-view-customer:hover{
+    color: #eeeeee;
 }
 
+.search-customer{
+    margin-top: 3rem;
+}
+
+.Card-header-colour{
+    background: #133a75;
+    color: #eeeeee;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.customer-search-text-field{
+    border: 2px solid black;
+}
+
+.customer-name-box{
+    border: 2px solid black;
+}
+
+.btn-customer-search{
+    margin-top: 2rem;
+}
+
+.customer-table-view{
+    margin-top: 4rem;
+}

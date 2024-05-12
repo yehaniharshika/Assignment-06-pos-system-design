@@ -33,6 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="placeOrder.html">Orders</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="orderDetails.html">Order Details</a>
+                    </li>
 
                 </ul>
                 <a href="signup.html" class="btn btn-outline-primary log-out-btn">LogOut</a>
@@ -55,9 +58,45 @@
             </div>
         </section>
 
-        <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <button type="button" class="btn btn-outline-danger" id="button-add-new-customer"  data-bs-toggle="modal" data-bs-target="#addCustomerModal">+ Add new customer</button>
-            <button type="button" class="btn btn-outline-primary" id="button-view-customer"  data-bs-toggle="modal" data-bs-target="#exampleModal"> View all customers</button>
+        <section class="Customer_Details_Form col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card cardSize">
+                <div id="Card-Header-back-colour" class="card-header">
+                    Customer Details
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Customer ID</label>
+                            <input type="text" class="form-control">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter customer name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Address</label>
+                            <textarea class="form-control" placeholder="Enter customer address" id="floatingTextarea2" style="height: 100px"></textarea>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="floatingInput7" placeholder="07********">
+                        </div>
+
+
+                        <div class="text-end ">
+                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="reset" class="btn btn-primary">Update</button>
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
         </section>
 
         <section>

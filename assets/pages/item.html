@@ -33,7 +33,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="placeOrder.html">Orders</a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link" href="orderDetails.html">Order Details</a>
+                    </li>
                 </ul>
                 <a href="signup.html" class="btn btn-outline-primary log-out-btn">LogOut</a>
             </div>
@@ -54,93 +56,46 @@
             </div>
         </section>
 
-        <section class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-            <button type="button" class="btn btn-outline-danger" id="button-add-new-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">+ Add new item</button>
-            <button type="button" class="btn btn-outline-primary" id="button-view-item"  data-bs-toggle="modal" data-bs-target="#addItemModal">View all item</button>
-        </section>
+        <section class="Items_Details_Form col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card cardSize">
+                <div id="Card-Header-back-colour" class="card-header">
+                    Items Details
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Item ID</label>
+                            <input type="text" class="form-control">
+                        </div>
 
-        <section>
-            <!--add Item modal-->
-            <div class="modal fade" id="addItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel addItemLabel">New Item</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Item name">
                         </div>
-                        <div class="modal-body item-card">
-                            <!--item add form-->
-                            <form>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalCode" class="form-label label-ItemCode">Item code</label>
-                                    <input type="text" class="form-control input-code" id="formGroupExampleInputModalCode" placeholder="Enter customer ID">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalItem" class="form-label label-ItemName">Item Name</label>
-                                    <input type="text" class="form-control input-item" id="formGroupExampleInputModalItem" placeholder="Enter Item Name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalPrice" class="form-label label-ItemPrice">Item Price</label>
-                                    <input type="text" class="form-control input-price" id="formGroupExampleInputModalPrice" placeholder="Enter item price">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInput2ModalQty" class="form-label label-ItemQty">Item Quantity</label>
-                                    <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalQty" placeholder="Enter Quantity">
-                                </div>
 
-                                <br>
-                            </form>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Unit Price</label>
+                            <input type="number" class="form-control" placeholder="Enter price">
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="close-item">Close</button>
-                            <button type="button" class="btn btn-primary" id="item-save">Save</button>
+
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Quantity On Hand</label>
+                            <input type="number" class="form-control" placeholder="Enter qty">
                         </div>
-                    </div>
+
+                        <div class="text-end ">
+                            <button type="submit" class="btn btn-success">Save</button>
+                            <button type="reset" class="btn btn-primary">Update</button>
+                            <button type="reset" class="btn btn-danger">Delete</button>
+                            <button type="reset" class="btn btn-warning">Reset</button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
         </section>
 
-        <section>
-            <!--open model from item search-->
-            <div class="modal fade" id="ItemModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel addSearchItemLabel">Item Form</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body item-card">
-                            <!--item add form-->
-                            <form>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalItemCode" class="form-label label-ItemCode">Item code</label>
-                                    <input type="text" class="form-control input-code" id="formGroupExampleInputModalItemCode" placeholder="Enter customer ID">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalItemName" class="form-label label-ItemName">Item Name</label>
-                                    <input type="text" class="form-control input-item" id="formGroupExampleInputModalItemName" placeholder="Enter Item Name">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInputModalItemPrice" class="form-label label-ItemPrice">Item Price</label>
-                                    <input type="text" class="form-control input-price" id="formGroupExampleInputModalItemPrice" placeholder="Enter item price">
-                                </div>
-                                <div class="mb-3">
-                                    <label for="formGroupExampleInput2ModalItemQty" class="form-label label-ItemQty">Item Quantity</label>
-                                    <input type="number" class="form-control input-qty" id="formGroupExampleInput2ModalItemQty" placeholder="Enter Quantity">
-                                </div>
-
-                                <br>
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="item-close">Close</button>
-                            <button type="button" class="btn btn-warning" id="item-update">update</button>
-                            <button type="button" class="btn btn-primary" id="item-delete">delete</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
 
         <section class=" search-item col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
             <div class="card cardSize-item">
@@ -167,7 +122,7 @@
 
         <section class="customer-table-view col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10" >
             <table class="table caption-top tbl-customer">
-                <caption id="item-table-topic">List of customers</caption>
+                <caption id="item-table-topic">List of items</caption>
                 <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -192,54 +147,6 @@
                     <td>Diana-Chocolate Biscuit</td>
                     <td>130.00</td>
                     <td>24</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>I-003</td>
-                    <td>Panda-Baby colonge</td>
-                    <td>245.00</td>
-                    <td>15</td>
-
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-                <tr>
-                    <th scope="row">7</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-
-                </tr>
-                <tr>
-                    <th scope="row">8</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
 
                 </tr>
                 </tbody>

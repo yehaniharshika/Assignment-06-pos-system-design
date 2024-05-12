@@ -28,9 +28,17 @@ header {
 }
 
 .customer-part>div>h1{
-    margin-top: 8rem;
+    margin-top: 6rem;
     font-weight: bolder;
 }
+
+#Card-Header-back-colour {
+    background-color: #133a75;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+}
+
 .cus-card{
     max-width: 800px;
     margin-top: 50px;

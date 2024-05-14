@@ -31,6 +31,8 @@ header {
     margin-top: 5rem;
 }
 
-.gradient-text{
+.gradient-text h3{
+    font-family: Ubuntu;
     font-weight: bold;
+    margin-top: 1rem;
 }

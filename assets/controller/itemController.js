@@ -37,27 +37,39 @@ $("#item-tbl-tbody").on('click', 'tr', function() {
 
 });
 
-/*
-function generateCustomerId() {
-    let highestCustomerId = 0;
+
+function generateItemCode() {
+    let highestItemCode = 0;
 
     // Find the highest numeric part of existing customer IDs
     for (let i = 0; i < item_db.length; i++) {
-        const numericPart = parseInt(item_db[i].customerId.split('-')[1]);
-        if (!isNaN(numericPart) && numericPart > highestCustomerId) {
-            highestCustomerId = numericPart;
+        const numericPart = parseInt(item_db[i].itemCode.split('-')[1]);
+        if (!isNaN(numericPart) && numericPart > highestItemCode) {
+            highestItemCode = numericPart;
         }
     }
 
-    // Generate a new customer ID by incrementing the highest numeric part
-    const newCustomerId = highestCustomerId + 1;
+    // Generate a new item code by incrementing the highest numeric part
+    const newItemCode = highestItemCode + 1;
 
-    // Insert the new customer ID into the #customer-id text field
-    $('#customer-id').val('CUS-00' + newCustomerId);
+    // Insert the new item code into the #customer-id text field
+    $('#item-code').val('I-00' + newItemCode);
 
     // Return the generated customer ID
-    return 'CUS-00' + newCustomerId;
-}*/
+    return 'I-00' + newItemCode;
+}
+
+/*Auto-generate the item code when navigating to the main section*/
+function populateItemCodeField() {
+    const itemCodeField = document.getElementById('item-code');
+    const generatedItemCode = generateItemCode();
+    itemCodeField.value = generatedItemCode;
+}
+
+// Event listener for when the page loads
+window.addEventListener('load', function() {
+    populateItemCodeField()
+});
 
 /*save item*/
 $("#item-save").on('click', () => {
@@ -84,15 +96,15 @@ $("#item-save").on('click', () => {
 
     loadTable();
     $("#item-reset").click();
-    populateCustomerIdField();
+    populateItemCodeField();
 });
 
 /*update item*/
 $("#item-update").on('click', () => {
-    var itemCode = $('#customer-Id').val();
-    var itemName = $('#customer-name').val();
-    var itemUnitPrice = $('#customer-address').val();
-    var itemQtyOnHand = $('#contact-number').val();
+    var itemCode = $('#item-code').val();
+    var itemName = $('#item-name').val();
+    var itemUnitPrice = $('#unit-price').val();
+    var itemQtyOnHand = $('#qty-on-hand').val();
 
 
     let itemObj = item_db[recordIndex];
@@ -104,13 +116,26 @@ $("#item-update").on('click', () => {
 
     Swal.fire(
         'Update Successfully !',
-         I updated successfully.',
+        'item updated successfully.',
         'success'
     )
 
+    loadTable();
+    $("#item-reset").click();
+    populateItemCodeField();
+});
+
+/*delete customer*/
+$("#item-delete").on('click', () => {
+
+    item_db.splice(recordIndex, 1);
+
+    Swal.fire(
+        'delete Successfully !',
+        'Item deleted successfully.',
+        'success'
+    )
 
     loadTable();
-    $("#customer-reset").click();
-    populateCustomerIdField();
-
+    $("#item-reset").click();
 });

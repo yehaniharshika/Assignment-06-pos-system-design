@@ -260,10 +260,10 @@
                         </div>
 
                         <div class="text-end ">
-                            <button type="submit" class="btn btn-success">Save</button>
-                            <button type="reset" class="btn btn-primary">Update</button>
-                            <button type="reset" class="btn btn-danger">Delete</button>
-                            <button type="reset" class="btn btn-warning">Reset</button>
+                            <button type="button" class="btn btn-success" id="item-save">Save</button>
+                            <button type="button" class="btn btn-primary" id="item-update">Update</button>
+                            <button type="button" class="btn btn-danger" id="item-delete">Delete</button>
+                            <button type="reset" class="btn btn-warning" id="item-reset">Reset</button>
                         </div>
                     </form>
                 </div>
@@ -292,7 +292,7 @@
                     <th scope="col">Item quantity</th>
                 </tr>
                 </thead>
-                <tbody>
+                <tbody  id="item-tbl-tbody">
                 </tbody>
             </table>
 
@@ -709,6 +709,7 @@
 <script src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="module" src="assets/controller/customerController.js"></script>
+<script type="module" src="assets/controller/itemController.js"></script>
 
 </body>
 </html>

@@ -116,13 +116,13 @@ $("#customer-update").on('click', () => {
     var customerContactNum = $('#contact-number').val();
     var customerEmail = $('#email').val();
 
-    let studentObj = customer_db[recordIndex];
+    let customerObj = customer_db[recordIndex];
     // let studentObj = {...students[recordIndex]}; // clone object
-    studentObj.customerId = customerId;
-    studentObj.name = customerName;
-    studentObj.address = customerAddress;
-    studentObj.contactNumber = customerContactNum;
-    studentObj.email = customerEmail;
+    customerObj.customerId = customerId;
+    customerObj.name = customerName;
+    customerObj.address = customerAddress;
+    customerObj.contactNumber = customerContactNum;
+    customerObj.email = customerEmail;
 
     Swal.fire(
         'Update Successfully !',

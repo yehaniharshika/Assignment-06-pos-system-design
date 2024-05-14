@@ -2,6 +2,7 @@ import {ItemModel} from "../model/ItemModel.js";
 import {customer_db, item_db} from "../db/db.js";
 
 var recordIndex;
+var searchItemIndex = undefined;
 function loadTable() {
 
     $("#item-tbl-tbody").empty();
@@ -68,7 +69,7 @@ function populateItemCodeField() {
 
 // Event listener for when the page loads
 window.addEventListener('load', function() {
-    populateItemCodeField()
+    populateItemCodeField();
 });
 
 /*save item*/
@@ -138,4 +139,27 @@ $("#item-delete").on('click', () => {
 
     loadTable();
     $("#item-reset").click();
+    populateItemCodeField();
 });
+
+$("#item-search").on('click', () => {
+    let itemSearchCode = $("#item-search-code").val();
+    let item = item_db.find((item) => item.itemCode === itemSearchCode);
+
+    if (item) {
+        $("#item-code").val(item.itemCode);
+        $("#item-name").val(item.itemName);
+        $("#unit-price").val(item.unitPrice);
+        $("#qty-on-hand").val(item.qtyOnHand);
+    } else {
+        Swal.fire(
+            'not found!',
+            'item not found..'
+        );
+    }
+
+    $("#item-search-code").val(""); // Clear the search input field
+    populateItemCodeField();
+});
+
+

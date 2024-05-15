@@ -1,4 +1,3 @@
-
 body{
     width: 100vw;
     height: 100vh;
@@ -89,32 +88,14 @@ header {
     left: 0;
     right: 0;
     margin: auto;
-    border: 1px solid darkgray;
     padding: 0;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
 }
 
 .table-model-style {
     margin-top: 20px;
     border: 1px solid darkgray;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-}
-
-.search-card-style {
-    left: 0;
-    right: 0;
-    margin: auto;
-    margin-top: 20px;
-    border: 1px solid darkgray;
-}
-
-#invoice-details-header{
-
-}
-
-.invoice-card{
-    background-color: #F0CCFD;
-    height: 342px;
 }
 
 #logo-name{
@@ -162,51 +143,4 @@ header {
 
 .set-item-code{
     border: 2px solid black;
-}
-
-.set-item-name{
-    border: 2px solid black;
-}
-
-.set-Item-price{
-    border: 2px solid black;
-}
-
-.input-balance{
-    border: 2px solid black;
-}
-
-.input-cash{
-    border: 2px solid black;
-}
-
-.input-discount{
-    border: 2px solid black;
-}
-
-.input-TotalPrice{
-    border: 2px solid black;
-}
-
-.input-SubTotalPrice{
-    border: 2px solid black;
-}
-.btn-purchase{
-    font-weight: 600;
-    border-radius: 20px;
-}
-.btn-add-to-cart{
-    font-weight: 600;
-    border-radius: 20px;
-}
-
-@media all and (max-width: 768px){
-
-    .select-item-Form{
-        margin-top: 2rem;
-    }
-
-    .invoice-cardSize{
-        height: 520px;
-    }
 }

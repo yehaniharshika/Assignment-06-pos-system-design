@@ -126,7 +126,7 @@ $("#item-update").on('click', () => {
     populateItemCodeField();
 });
 
-/*delete customer*/
+/*delete item*/
 $("#item-delete").on('click', () => {
 
     item_db.splice(recordIndex, 1);
@@ -142,6 +142,7 @@ $("#item-delete").on('click', () => {
     populateItemCodeField();
 });
 
+/*search item*/
 $("#item-search").on('click', () => {
     let itemSearchCode = $("#item-search-code").val();
     let item = item_db.find((item) => item.itemCode === itemSearchCode);
@@ -158,8 +159,13 @@ $("#item-search").on('click', () => {
         );
     }
 
-    $("#item-search-code").val(""); // Clear the search input field
+    $("#item-search-code").val("");
     populateItemCodeField();
 });
+
+/*$("#item-reset").on('click', () => {
+    //$("#item-reset").click();
+    populateItemCodeField();
+});*/
 
 

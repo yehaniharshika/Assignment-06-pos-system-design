@@ -203,8 +203,8 @@
                 <div  class="card-body">
                     <h5 id="search-bar" class="card-title">Search Customer</h5>
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Enter customer NIC / Contact" aria-label="Search">
-                        <button class="btn btn-outline-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Search</button>
+                        <input class="form-control me-2" type="search" placeholder="Enter customer Id here" id="customer-search-by-id" aria-label="Search" >
+                        <button class="btn btn-outline-primary" type="button" id="customer-search">Search</button>
                     </form>
                 </div>
             </div>
@@ -303,13 +303,6 @@
 <!--order section-->
 <section class="main-part container" id="order-section">
     <section class="row">
-        <section class=" row col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 main-header">
-            <div class="text-end col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                <button type="button" class="btn btn-primary btn-view-all-orders" data-bs-toggle="modal" data-bs-target="#exampleModal">View All Orders</button>
-                <button type="button" class="btn btn-success search-orders" data-bs-toggle="modal" data-bs-target="#exampleModal1">Search Orders</button>
-            </div>
-        </section>
-
         <section class="Order_Details_Form col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
             <div class="card invoice-cardSize">
                 <div id="invoice-details-header " class="card-header Card-header-colour">
@@ -327,12 +320,9 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="exampleFormControlTextareaID" class="form-label label-load-customerId">Customer ID</label>
-                            <select class="form-select load-customer-Id" aria-label="Default select example" id="exampleFormControlTextareaID">
-                                <option selected>Select the Customer ID</option>
-                                <option value="1">C-001</option>
-                                <option value="2">C-002</option>
-                                <option value="3">C-003</option>
+                            <label for="customer_id1" class="form-label">Customer Id</label>
+                            <select class="form-select" aria-label="Disabled select example" id="customer_id1">
+                                <option selected>Select Customer Id</option>
                             </select>
                         </div>
 
@@ -340,12 +330,34 @@
                             <label for="inputPassword4" class="form-label">Customer Name</label>
                             <input type="text" class="form-control customer-name-set" id="inputPassword4">
                         </div>
-                        <div class="col-12">
-                            <label for="inputAddress" class="form-label">Customer Address</label>
-                            <input type="text" class="form-control customer-address-set" id="inputAddress">
+
+                        <div class="col-md-6">
+                            <label for="total" class="form-label">Total</label>
+                            <input type="number" class="form-control" id="total" placeholder="Total Here" disabled>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="discount" class="form-label">Discount</label>
+                            <input type="number" class="form-control" id="discount" placeholder="Discount in percentage Here">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="sub_total" class="form-label">Sub Total</label>
+                            <input type="number" class="form-control" id="sub_total" placeholder="Sub Total Here" disabled>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Cash" class="form-label">Cash</label>
+                            <input type="number" class="form-control" id="Cash" placeholder="Cash Here">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="balance" class="form-label">Balance</label>
+                            <input type="number" class="form-control" id="balance" placeholder="Balance Here" disabled>
+                        </div>
+                        <div class="mt-1 mb-3" id="button">
+                            <button id="submitBtn2" type="button" class="btn btn-success">Purchase</button>
+                            <button id="resetBtn2" type="reset" class="btn btn-danger">Reset</button>
                         </div>
                     </form>
-
                 </div>
             </div>
         </section>
@@ -358,318 +370,62 @@
                 <div class="card-body select-item-card">
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="inputState" class="form-label">Item Code</label>
-                            <select id="inputState" class="form-select set-item-code">
-                                <option selected>select Item code</option>
-                                <option>...</option>
+                            <label for="item_code1" class="form-label">Item Code</label>
+                            <select class="form-select" aria-label="Disabled select example" id="item_code1">
+                                <option selected>Select Item Code</option>
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Item Name</label>
-                            <input type="text" class="form-control set-item-name" id="inputPassword1">
+                            <label for="item_name1" class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="item_name1" placeholder="Item Name Here" disabled>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Unit Price</label>
-                            <input type="number" class="form-control set-Item-price" id="inputEmail1 ">
+                            <label for="price1" class="form-label">Price</label>
+                            <input type="number" class="form-control" id="price1" placeholder="Price Here" disabled>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Item Quantity</label>
-                            <input type="number" class="form-control set-qty" id="inputPassword5">
+                            <label for="qty_on_hand" class="form-label">Qty on Hand</label>
+                            <input type="number" class="form-control" id="qty_on_hand" placeholder="Qty on hand Here" disabled>
                         </div>
-                        <div class="mb-3">
-                            <label for="Input2ModalOrderQty" class="form-label label-setOrderQty">Order Quantity</label>
-                            <input type="number" class="form-control set-OrderQty" id="Input2ModalOrderQty" placeholder="Enter Order Quantity">
+                        <div class="col-md-6">
+                            <label for="getQty" class="form-label">Getting Qty</label>
+                            <input type="number" class="form-control" id="getQty" placeholder="Qty Here">
                         </div>
-                        <div class="col-12 text-end">
-                            <button type="submit" class="btn btn-warning btn-add-to-cart">Add to cart</button>
+                        <div class="col-12 text-end" id="button1">
+                            <button id="addBtn" type="submit" class="btn btn-warning" style="width: 140px">Add to cart</button>
+                            <button id="resetItemDetailsBtn" type="reset" class="btn btn-danger">Reset</button>
+                        </div>
+                        <div class="col m-3">
+                            <table class="table" id="item-order-table">
+                                <thead class="table-primary">
+                                <tr>
+                                    <th scope="col">Item Code</th>
+                                    <th scope="col">Item Name</th>
+                                    <th scope="col">Price Per Kg</th>
+                                    <th scope="col">Qty On Hand</th>
+                                    <th scope="col">Qty</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section class="Order-Details col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 col-xxl-5" id="purchase-position">
-            <div class="card" id="purchase-card" >
-                <div class="card-body">
-                    <form class="row g-3">
-                        <div class="row g-3 align-items-center">
-                            <div class="col-auto">
-                                <label for="inputPassword6" class="col-form-label"><h4 id="total-label">Total Price:</h4></label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="number" id="inputPassword6" class="form-control input-TotalPrice" aria-describedby="passwordHelpInline">
-                            </div>
-                        </div>
-
-                        <div class="row g-3 align-items-center">
-                            <div class="col-auto">
-                                <label for="inputPassword6" class="col-form-label"><h4 id="sub-total-label">Sub Total Price:</h4></label>
-                            </div>
-                            <div class="col-auto">
-                                <input type="number" id="inputPassword" class="form-control input-SubTotalPrice" aria-describedby="passwordHelpInline">
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Cash :</label>
-                            <input type="number" class="form-control input-cash" id="inputPassword10">
-                        </div>
-                        <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Discount :</label>
-                            <input type="number" class="form-control input-discount" id="inputEmail10">
-                        </div>
-                        <div class="col-md-10">
-                            <label for="inputPassword4" class="form-label">Balance :</label>
-                            <input type="number" class="form-control input-balance" id="inputPassword50">
-                        </div>
-
-                        <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-success btn-purchase">Purchase Order</button>
-                        </div>
+        <section class="search-order col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="card" >
+                <div  class="card-body">
+                    <h5 id="search-bar-order" class="card-title">Search Order</h5>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Enter order Id" id="order-search-by-id" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="button" id="order-search">Search</button>
                     </form>
                 </div>
             </div>
         </section>
-
-        <section class="Order-Table-View col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 col-xxl-10">
-            <table class="table table-secondary table-striped" >
-                <thead>
-                <tr class="table-light">
-                    <th scope="col">Item code</th>
-                    <th scope="col">Item Description</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Total</th>
-                    <th scope="col">Action</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td>
-                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-
-        </section>
-    </section>
-
-    <section>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" id="Model-All-Order">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <table class="table table-secondary table-striped table-model-style" >
-                            <thead>
-                            <tr class="table-light">
-                                <th scope="col">Item code</th>
-                                <th scope="col">Item Description</th>
-                                <th scope="col">Price</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Total</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="modal-footer">
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section>
-        <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-xl" id="Model-All-Order1">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel1"></h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="card search-card-style col-md-8" >
-                            <div  class="card-body">
-                                <h5 id="search-bar-font" class="card-title">Search Order</h5>
-                                <form class="d-flex" role="search">
-                                    <input class="form-control me-2" type="search" placeholder="Enter Order ID " aria-label="Search">
-                                    <button class="btn btn-outline-primary" type="submit">Search</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="card cardSize search-card-style col-md-11">
-                            <div id="c" class="card-header Card-Header-back-colour">
-                                Invoice Details
-                            </div>
-                            <div class="card-body">
-                                <form class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="inputEmail4" class="form-label">Order ID</label>
-                                        <input type="text" class="form-control" id="inputEmail5">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputPassword4" class="form-label">Order Date</label>
-                                        <input type="date" class="form-control" id="inputPassword3">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputEmail4" class="form-label">Customer ID</label>
-                                        <input type="text" class="form-control" id="inputEmail3 ">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputPassword4" class="form-label">Customer Name</label>
-                                        <input type="text" class="form-control" id="inputPassword9">
-                                    </div>
-                                    <div class="col-12">
-                                        <label for="inputAddress" class="form-label">Customer Address</label>
-                                        <input type="text" class="form-control" id="inputAddress8">
-                                    </div>
-                                </form>
-
-                            </div>
-                        </div>
-
-                        <div class="card cardSize search-card-style col-md-11">
-                            <div id="ddd" class="card-header Card-Header-back-colour">
-                                Item Details
-                            </div>
-                            <div class="card-body">
-                                <form class="row g-3">
-                                    <div class="col-md-6">
-                                        <label for="inputState" class="form-label label-load-itemCode">Item Code</label>
-                                        <select id="inputState1" class="form-select">
-                                            <option selected>Choose...</option>
-                                            <option>...</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputPassword4" class="form-label label-setItemName">Item Name</label>
-                                        <input type="text" class="form-control" id="inputPassword15">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputEmail4" class="form-label label-setItemPrice">Unit Price</label>
-                                        <input type="number" class="form-control" id="inputEmail15">
-                                    </div>
-                                    <div class="col-md-6">
-                                        <label for="inputPassword4" class=" label-setItemQty">Item Quantity</label>
-                                        <input type="number" class="form-control" id="inputPassword55">
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="formGroupExampleInput2ModalOrderQty" class="form-label label-setOrderQty">Order Quantity</label>
-                                        <input type="number" class="form-control set-OrderQty" id="formGroupExampleInput2ModalOrderQty" placeholder="Enter Order Quantity">
-                                    </div>
-                                    <div class="col-12 text-end">
-                                        <button type="submit" class="btn btn-warning">Add to cart</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="modal-footer">
-                        <div class="text-end ">
-                            <button type="button" class="btn btn-warning">Update</button>
-                            <button type="button" class="btn btn-danger">Delete</button>
-                            <button type="reset" class="btn btn-primary">Refresh</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 </section>
 

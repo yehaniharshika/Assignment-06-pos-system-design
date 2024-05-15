@@ -311,17 +311,17 @@
                 <div class="card-body invoice-card">
                     <form class="row g-3">
                         <div class="col-md-6">
-                            <label for="inputEmail4" class="form-label">Order ID</label>
-                            <input type="text" class="form-control input-OrderId" id="inputEmail4">
+                            <label for="order-id" class="form-label">Order ID</label>
+                            <input type="text" class="form-control" id="order-id">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Order Date</label>
-                            <input type="date" class="form-control input-Date" id="inputPassword2">
+                            <label for="order-date" class="form-label">Order Date</label>
+                            <input type="text" class="form-control input-Date" id="order-date">
                         </div>
 
                         <div class="col-md-6">
-                            <label for="customer_id1" class="form-label">Customer Id</label>
-                            <select class="form-select" aria-label="Disabled select example" id="customer_id1">
+                            <label for="customer-id-box" class="form-label">Customer Id</label>
+                            <select class="form-select" aria-label="Disabled select example" id="customer-id-box">
                                 <option selected>Select Customer Id</option>
                             </select>
                         </div>
@@ -372,7 +372,7 @@
                         <div class="col-md-6">
                             <label for="item_code1" class="form-label">Item Code</label>
                             <select class="form-select" aria-label="Disabled select example" id="item_code1">
-                                <option selected>Select Item Code</option>
+                                <option
                             </select>
                         </div>
                         <div class="col-md-6">
@@ -466,6 +466,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="module" src="assets/controller/customerController.js"></script>
 <script type="module" src="assets/controller/itemController.js"></script>
+<script type="module" src="assets/controller/orderController.js"></script>
 
 </body>
 </html>

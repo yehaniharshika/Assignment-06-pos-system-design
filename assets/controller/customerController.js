@@ -97,10 +97,10 @@ function generateCustomerId() {
     const newCustomerId = highestCustomerId + 1;
 
     // Insert the new customer ID into the #customer-id text field
-    $('#customer-id').val('CUS-00' + newCustomerId);
+    $('#customer-id').val('C00-00' + newCustomerId);
 
     // Return the generated customer ID
-    return 'CUS-00' + newCustomerId;
+    return 'C00-00' + newCustomerId;
 }
 
 /*Auto-generate the customer ID when navigating to the main section*/

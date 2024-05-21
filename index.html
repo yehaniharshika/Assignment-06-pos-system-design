@@ -319,16 +319,16 @@
                             <input type="text" class="form-control input-Date" id="order-date">
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="customer-id-box" class="form-label">Customer Id</label>
-                            <select class="form-select" aria-label="Disabled select example" id="customer-id-box">
-                                <option selected>Select Customer Id</option>
+                        <div class="col-md-6 mt-3 mb-3">
+                            <label class="form-label fw-bold">Customer ID :</label>
+                            <select class="form-select" name="customer" id="cusIdOption">
+                                <option disabled selected value="">Select a Customer ID</option>
                             </select>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="inputPassword4" class="form-label">Customer Name</label>
-                            <input type="text" class="form-control customer-name-set" id="inputPassword4">
+                            <label for="set-customer-name" class="form-label">Customer Name</label>
+                            <input type="text" class="form-control customer-name-set" id="set-customer-name">
                         </div>
 
                         <div class="col-md-6">
@@ -372,7 +372,7 @@
                         <div class="col-md-6">
                             <label for="item_code1" class="form-label">Item Code</label>
                             <select class="form-select" aria-label="Disabled select example" id="item_code1">
-                                <option
+                                <option selected>Select Item Code</option>
                             </select>
                         </div>
                         <div class="col-md-6">
@@ -462,11 +462,12 @@
 </section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="assets/lib/jquery-3.7.1.min.js"></script>
-<script src="assets/js/main.js"></script>
+<script type="module" src="assets/js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script type="module" src="assets/controller/customerController.js"></script>
 <script type="module" src="assets/controller/itemController.js"></script>
 <script type="module" src="assets/controller/orderController.js"></script>
+<script type="module" src="assets/controller/orderDetailsController.js"></script>
 
 </body>
 </html>

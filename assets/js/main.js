@@ -1,3 +1,5 @@
+import {loadAllCustomerId} from '../controller/orderController.js';
+
 $('#dashboard-section').css({display: 'block'});
 $('#customer-section').css({display: 'none'});
 $('#item-section').css({display: 'none'});
@@ -38,6 +40,7 @@ $('#nav-orders').on('click', () => {
     $('#item-section').css({display: 'none'});
     $('#order-section').css({display: 'block'});
     $('#order-details-section').css({display: 'none'});
+    loadAllCustomerId();
 });
 
 // order details nav management

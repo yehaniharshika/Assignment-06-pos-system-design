@@ -320,15 +320,20 @@
                         </div>
 
                         <div class="col-md-6 mt-3 mb-3">
-                            <label class="form-label fw-bold">Customer ID :</label>
-                            <select class="form-select" name="customer" id="cusIdOption">
+                            <label class="form-label fw-bold">Customer ID</label>
+                            <select class="form-select" name="customer" id="custIdOption">
                                 <option disabled selected value="">Select a Customer ID</option>
                             </select>
                         </div>
 
                         <div class="col-md-6">
-                            <label for="set-customer-name" class="form-label">Customer Name</label>
+                            <label class="form-label">Customer Name</label>
                             <input type="text" class="form-control customer-name-set" id="set-customer-name">
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Customer Email</label>
+                            <input type="email" class="form-control customer-name-set" id="set-customer-email">
                         </div>
 
                         <div class="col-md-6">
@@ -369,12 +374,14 @@
                 </div>
                 <div class="card-body select-item-card">
                     <form class="row g-3">
-                        <div class="col-md-6">
-                            <label for="item_code1" class="form-label">Item Code</label>
-                            <select class="form-select" aria-label="Disabled select example" id="item_code1">
-                                <option selected>Select Item Code</option>
+
+                        <div class="col-md-6 mt-3 mb-3">
+                            <label class="form-label fw-bold">Item Code </label>
+                            <select class="form-select" name="item" id="itemCodeOption">
+                                <option disabled selected value="">Select item Code</option>
                             </select>
                         </div>
+
                         <div class="col-md-6">
                             <label for="item_name1" class="form-label">Item Name</label>
                             <input type="text" class="form-control" id="item_name1" placeholder="Item Name Here" disabled>

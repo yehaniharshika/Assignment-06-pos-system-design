@@ -54,7 +54,6 @@ export function loadAllCustomerId() {
     $('#custIdOption').empty(); // Clear existing options
     // Append new customer IDs
     for (let customerArElement of customer_db) {
-        //console.log(`Appending customer ID: ${customerArElement.customerId}`);
         $('#custIdOption').append(`<option value="${customerArElement.customerId}">${customerArElement.customerId}</option>`);
     }
 }
@@ -70,7 +69,16 @@ $('#custIdOption').on('change', function(){
     }
 });
 
+/*load item code for combo box*/
+export  function loadAllItemCodes(){
+    console.log("load all item codes..");
+    $('#itemCodeOption').empty();
 
+    //append new item codes
+    for (let itemArElement of item_db){
+        $('#itemCodeOption').append(`<option value="${itemArElement.itemCode}">${itemArElement.itemCode}</option>`);
+    }
+}
 
 
 

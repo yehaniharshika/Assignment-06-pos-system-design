@@ -54,10 +54,10 @@ function generateItemCode() {
     const newItemCode = highestItemCode + 1;
 
     // Insert the new item code into the #customer-id text field
-    $('#item-code').val('I-00' + newItemCode);
+    $('#item-code').val('I00-00' + newItemCode);
 
     // Return the generated customer ID
-    return 'I-00' + newItemCode;
+    return 'I00-00' + newItemCode;
 }
 
 /*Auto-generate the item code when navigating to the main section*/

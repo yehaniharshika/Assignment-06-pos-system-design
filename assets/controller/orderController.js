@@ -144,13 +144,13 @@ $('#add-to-cart-btn').on('click', function() {
     }
 });*/
 
-/*$('#reset-order-details-btn').on('click', function() {
+$('#reset-order-details-btn').on('click', function() {
     // Clear item details
     $('#set-order-form-item-name').val('');
     $('#set-order-form-item-price').val('');
     $('#set-item-qty-on-hand').val('');
     $('#order-form-get-qty').val('');
-});*/
+});
 
 function populateItemTable() {
     const tbody = $('#item-order-table tbody');

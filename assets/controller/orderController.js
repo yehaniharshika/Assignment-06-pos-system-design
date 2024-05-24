@@ -99,7 +99,7 @@ $('#itemCodeOption').on('change', function(){
 });
 
 
-/*// Update quantity on hand when getting quantity is entered
+// Update quantity on hand when getting quantity is entered
 $('#order-form-get-qty').on('input', function() {
     selectedItemCode = $('#itemCodeOption').val();
     const selectedItem = item_db.find(item => item.itemCode === selectedItemCode);
@@ -109,7 +109,7 @@ $('#order-form-get-qty').on('input', function() {
         const updatedQty = selectedItem.qtyOnHand - getQty;
         $('#set-item-qty-on-hand').val(updatedQty >= 0 ? updatedQty : selectedItem.qtyOnHand);
     }
-});*/
+});
 
 /*// Add item to cart and update the order table
 $('#add-to-cart-btn').on('click', function() {

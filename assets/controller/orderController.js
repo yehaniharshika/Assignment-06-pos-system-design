@@ -180,6 +180,7 @@ function updateTotal() {
     updateSubTotal();
 }
 
+
 /*function updateSubTotal() {
     const total = parseFloat($('#total').val()) || 0;
     const discount = parseFloat($('#discount').val()) || 0;

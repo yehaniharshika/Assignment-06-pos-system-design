@@ -5,6 +5,11 @@ import {order_db} from "../db/db.js";
 import orderModel from "../model/orderModel.js";
 
 
+var recordIndex;
+let selectedItemCode;
+
+let items = [];
+
 function fillCurrentDate(){
     $("#order-date").val(new Date().toISOString().slice(0, 10));
 }
@@ -80,7 +85,133 @@ export  function loadAllItemCodes(){
     }
 }
 
+/*set item details*/
+$('#itemCodeOption').on('change', function(){
+    var selectedItemCode = $('#itemCodeOption option:selected').text();
+    console.log("selectItemCode",selectedItemCode);
+    for (let itemArElement of item_db) {
+        if (itemArElement.itemCode === selectedItemCode){
+            $('#set-order-form-item-name').val(itemArElement.itemName);
+            $('#set-order-form-item-price').val(itemArElement.unitPrice);
+            $('#set-item-qty-on-hand').val(itemArElement.qtyOnHand);
+        }
+    }
+});
 
+
+/*// Update quantity on hand when getting quantity is entered
+$('#order-form-get-qty').on('input', function() {
+    selectedItemCode = $('#itemCodeOption').val();
+    const selectedItem = item_db.find(item => item.itemCode === selectedItemCode);
+    const getQty = parseInt($(this).val(), 10);
+
+    if (selectedItem && getQty) {
+        const updatedQty = selectedItem.qtyOnHand - getQty;
+        $('#set-item-qty-on-hand').val(updatedQty >= 0 ? updatedQty : selectedItem.qtyOnHand);
+    }
+});*/
+
+/*// Add item to cart and update the order table
+$('#add-to-cart-btn').on('click', function() {
+    const selectedItemCode = $('#itemCodeOption').val();
+    const selectedItem = item_db.find(item => item.itemCode === selectedItemCode);
+    const getQty = parseInt($('#order-form-get-qty').val(), 10);
+
+    if (selectedItem && getQty && getQty <= selectedItem.qtyOnHand) {
+        //calculates the total price for the item.
+        const itemTotal = selectedItem.unitPrice * getQty;
+
+        // Update order database-add data for order_db array
+        items.push({
+            itemCode: selectedItem.itemCode,
+            itemName: selectedItem.itemName,
+            price: selectedItem.unitPrice,
+            qty: getQty,
+            total: itemTotal
+        });
+
+        // Update the item quantity on hand in the database
+        selectedItem.qtyOnHand -= getQty;
+        $('#reset-order-details-btn').click();
+
+        // Populate the item order table
+        populateItemTable();
+
+        // Update the total price
+        updateTotal();
+    } else {
+        alert('Invalid quantity or item not in stock.');
+    }
+});*/
+
+/*$('#reset-order-details-btn').on('click', function() {
+    // Clear item details
+    $('#set-order-form-item-name').val('');
+    $('#set-order-form-item-price').val('');
+    $('#set-item-qty-on-hand').val('');
+    $('#order-form-get-qty').val('');
+});*/
+
+/*
+function populateItemTable() {
+    const tbody = $('#item-order-table tbody');
+    tbody.empty();
+
+    items.forEach(item => {
+        tbody.append(`
+            <tr>
+                <td>${item.itemCode}</td>
+                <td>${item.itemName}</td>
+                <td>${item.price}</td>
+                <td>${item.qty}</td>
+                <td>${item.total}</td>
+            </tr>
+        `);
+    });
+}
+*/
+
+/*
+function updateTotal() {
+    let total = 0;
+
+    items.forEach(item => {
+        total += item.total;
+    });
+
+    $('#total').val(total);
+    updateSubTotal();
+}
+*/
+
+/*function updateSubTotal() {
+    const total = parseFloat($('#total').val()) || 0;
+    const discount = parseFloat($('#discount').val()) || 0;
+    const subTotal = total - (total * discount / 100);
+    $('#sub-total').val(subTotal);
+}
+
+$('#discount').on('input', updateSubTotal);
+
+$('#cash').on('input', function() {
+    const subTotal = parseFloat($('#sub-total').val()) || 0;
+    const cash = parseFloat($(this).val()) || 0;
+    const balance = cash - subTotal;
+    $('#balance').val(balance);
+});
+
+//purchase order
+$('#btn-purchase').on('click', function() {
+    //get the data needed for the order
+    const orderId = $('#order-id').val();
+    const orderDate = $('#order-date').val();
+    const customerId = $('#custIdOption').val();
+    const total = $('#total').val();
+    const discount = $('#discount').val();
+    const cash = $('#cash').val();
+
+
+});*/
 
 
 

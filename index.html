@@ -337,7 +337,7 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="total" class="form-label">Total</label>
+                            <label class="form-label">Total</label>
                             <input type="number" class="form-control" id="total" placeholder="Total Here" disabled>
                         </div>
 
@@ -347,19 +347,19 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="sub_total" class="form-label">Sub Total</label>
-                            <input type="number" class="form-control" id="sub_total" placeholder="Sub Total Here" disabled>
+                            <label for="sub-total" class="form-label">Sub Total</label>
+                            <input type="number" class="form-control" id="sub-total" placeholder="Sub Total Here" disabled>
                         </div>
                         <div class="col-md-6">
                             <label for="Cash" class="form-label">Cash</label>
-                            <input type="number" class="form-control" id="Cash" placeholder="Cash Here">
+                            <input type="number" class="form-control" id="cash" placeholder="Cash Here">
                         </div>
                         <div class="col-md-6">
                             <label for="balance" class="form-label">Balance</label>
                             <input type="number" class="form-control" id="balance" placeholder="Balance Here" disabled>
                         </div>
                         <div class="mt-1 mb-3" id="button">
-                            <button id="submitBtn2" type="button" class="btn btn-success">Purchase</button>
+                            <button id="btn-purchase" type="button" class="btn btn-success">Purchase</button>
                             <button id="resetBtn2" type="reset" class="btn btn-danger">Reset</button>
                         </div>
                     </form>
@@ -383,24 +383,24 @@
                         </div>
 
                         <div class="col-md-6">
-                            <label for="item_name1" class="form-label">Item Name</label>
-                            <input type="text" class="form-control" id="item_name1" placeholder="Item Name Here" disabled>
+                            <label  class="form-label">Item Name</label>
+                            <input type="text" class="form-control" id="set-order-form-item-name" placeholder="Item Name Here" disabled>
                         </div>
                         <div class="col-md-6">
-                            <label for="price1" class="form-label">Price</label>
-                            <input type="number" class="form-control" id="price1" placeholder="Price Here" disabled>
+                            <label class="form-label">Price</label>
+                            <input type="number" class="form-control" id="set-order-form-item-price" placeholder="Price Here" disabled>
                         </div>
                         <div class="col-md-6">
-                            <label for="qty_on_hand" class="form-label">Qty on Hand</label>
-                            <input type="number" class="form-control" id="qty_on_hand" placeholder="Qty on hand Here" disabled>
+                            <label class="form-label">Qty on Hand</label>
+                            <input type="number" class="form-control" id="set-item-qty-on-hand" placeholder="Qty on hand Here" disabled>
                         </div>
                         <div class="col-md-6">
-                            <label for="getQty" class="form-label">Getting Qty</label>
-                            <input type="number" class="form-control" id="getQty" placeholder="Qty Here">
+                            <label for="order-form-get-qty" class="form-label">Getting Qty</label>
+                            <input type="number" class="form-control" id="order-form-get-qty" placeholder="Qty Here">
                         </div>
                         <div class="col-12 text-end" id="button1">
-                            <button id="addBtn" type="submit" class="btn btn-warning" style="width: 140px">Add to cart</button>
-                            <button id="resetItemDetailsBtn" type="reset" class="btn btn-danger">Reset</button>
+                            <button id="add-to-cart-btn" type="button" class="btn btn-warning" style="width: 140px">Add to cart</button>
+                            <button id="reset-order-details-btn" type="reset" class="btn btn-danger">Reset</button>
                         </div>
                         <div class="col m-3">
                             <table class="table" id="item-order-table">
@@ -408,9 +408,9 @@
                                 <tr>
                                     <th scope="col">Item Code</th>
                                     <th scope="col">Item Name</th>
-                                    <th scope="col">Price Per Kg</th>
-                                    <th scope="col">Qty On Hand</th>
+                                    <th scope="col">Item Price</th>
                                     <th scope="col">Qty</th>
+                                    <th scope="col">Total</th>
                                 </tr>
                                 </thead>
                                 <tbody>

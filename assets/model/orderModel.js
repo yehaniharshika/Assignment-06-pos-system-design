@@ -3,6 +3,7 @@ export default class OrderModel{
     constructor(orderId,orderDate,customerId,total,discount,cash) {
         this.orderId = orderId;
         this.orderDate = orderDate;
+        this.customerId = customerId;
         this.total = total;
         this.discount = discount;
         this.cash = cash;
@@ -14,6 +15,10 @@ export default class OrderModel{
 
     get orderDate() {
         return this._orderDate;
+    }
+
+    get customerId() {
+        return this._customerId;
     }
 
     get total() {
@@ -34,6 +39,10 @@ export default class OrderModel{
 
     set orderDate(orderDate) {
         this._orderDate = orderDate;
+    }
+
+    set customerId(customerId) {
+        this._customerId = customerId;
     }
 
     set total(total) {

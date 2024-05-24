@@ -111,7 +111,7 @@ $('#order-form-get-qty').on('input', function() {
     }
 });
 
-/*// Add item to cart and update the order table
+// Add item to cart and update the order table
 $('#add-to-cart-btn').on('click', function() {
     const selectedItemCode = $('#itemCodeOption').val();
     const selectedItem = item_db.find(item => item.itemCode === selectedItemCode);
@@ -142,7 +142,7 @@ $('#add-to-cart-btn').on('click', function() {
     } else {
         alert('Invalid quantity or item not in stock.');
     }
-});*/
+});
 
 $('#reset-order-details-btn').on('click', function() {
     // Clear item details

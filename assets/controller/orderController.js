@@ -180,6 +180,7 @@ function updateTotal() {
     updateSubTotal();
 }
 
+//update total price when giving discount
 function updateSubTotal() {
     const total = parseFloat($('#total').val()) || 0;
     const discount = parseFloat($('#discount').val()) || 0;
@@ -187,8 +188,10 @@ function updateSubTotal() {
     $('#sub-total').val(subTotal);
 }
 
+//discount input
 $('#discount').on('input', updateSubTotal);
 
+//calculate balance
 $('#cash').on('input', function() {
     const subTotal = parseFloat($('#sub-total').val()) || 0;
     const cash = parseFloat($(this).val()) || 0;
@@ -196,7 +199,7 @@ $('#cash').on('input', function() {
     $('#balance').val(balance);
 });
 
-/*//purchase order
+//purchase order
 $('#btn-purchase').on('click', function() {
     //get the data needed for the order
     const orderId = $('#order-id').val();
@@ -207,7 +210,7 @@ $('#btn-purchase').on('click', function() {
     const cash = $('#cash').val();
 
 
-});*/
+});
 
 
 

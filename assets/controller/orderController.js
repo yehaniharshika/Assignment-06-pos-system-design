@@ -179,13 +179,13 @@ function updateTotal() {
     $('#total').val(total);
     updateSubTotal();
 }
-/*
+
 function updateSubTotal() {
     const total = parseFloat($('#total').val()) || 0;
     const discount = parseFloat($('#discount').val()) || 0;
     const subTotal = total - (total * discount / 100);
     $('#sub-total').val(subTotal);
-}*/
+}
 
 $('#discount').on('input', updateSubTotal);
 
@@ -196,8 +196,7 @@ $('#discount').on('input', updateSubTotal);
     $('#balance').val(balance);
 });*/
 
-/*
-//purchase order
+/*//purchase order
 $('#btn-purchase').on('click', function() {
     //get the data needed for the order
     const orderId = $('#order-id').val();
@@ -208,8 +207,7 @@ $('#btn-purchase').on('click', function() {
     const cash = $('#cash').val();
 
 
-});
-*/
+});*/
 
 
 

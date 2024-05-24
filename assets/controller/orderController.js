@@ -171,7 +171,6 @@ function populateItemTable() {
 }
 */
 
-/*
 function updateTotal() {
     let total = 0;
 
@@ -182,7 +181,6 @@ function updateTotal() {
     $('#total').val(total);
     updateSubTotal();
 }
-*/
 
 /*function updateSubTotal() {
     const total = parseFloat($('#total').val()) || 0;

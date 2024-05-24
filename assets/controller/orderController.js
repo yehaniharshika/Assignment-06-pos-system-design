@@ -152,7 +152,6 @@ $('#add-to-cart-btn').on('click', function() {
     $('#order-form-get-qty').val('');
 });*/
 
-/*
 function populateItemTable() {
     const tbody = $('#item-order-table tbody');
     tbody.empty();
@@ -169,7 +168,6 @@ function populateItemTable() {
         `);
     });
 }
-*/
 
 function updateTotal() {
     let total = 0;

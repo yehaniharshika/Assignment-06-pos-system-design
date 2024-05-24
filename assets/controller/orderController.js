@@ -189,12 +189,12 @@ function updateSubTotal() {
 
 $('#discount').on('input', updateSubTotal);
 
-/*$('#cash').on('input', function() {
+$('#cash').on('input', function() {
     const subTotal = parseFloat($('#sub-total').val()) || 0;
     const cash = parseFloat($(this).val()) || 0;
     const balance = cash - subTotal;
     $('#balance').val(balance);
-});*/
+});
 
 /*//purchase order
 $('#btn-purchase').on('click', function() {

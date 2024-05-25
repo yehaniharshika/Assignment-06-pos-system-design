@@ -2,7 +2,8 @@
 import {item_db} from "../db/db.js";
 import {customer_db} from '../db/db.js';
 import {order_db} from "../db/db.js";
-import orderModel from "../model/orderModel.js";
+import OrderModel from "../model/OrderModel.js";
+
 
 
 var recordIndex;
@@ -209,7 +210,25 @@ $('#btn-purchase').on('click', function() {
     const discount = $('#discount').val();
     const cash = $('#cash').val();
 
+    let order = new OrderModel(
+        orderId,
+        orderDate,
+        customerId,
+        total,
+        discount,
+        cash
+    );
 
+    order_db.push(order);
+    console.log(order);
+
+    Swal.fire(
+        'Order Placed Successfully!',
+        'The order has been saved.',
+        'success'
+    );
+
+    $('#reset-order-details-btn').click();
 });
 
 

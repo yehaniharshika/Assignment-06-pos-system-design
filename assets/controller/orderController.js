@@ -10,7 +10,15 @@ import { populateTableOrderDetails } from './orderDetailsController.js';
 var recordIndex;
 let selectedItemCode;
 let resetAllButton=$('#resetAllBtn');
+let updateItemBtn=$('#update-item-btn');
+let removeItemBtn=$('#remove-item-btn');
 let items = [];
+let resetOrderItemDetails=$('#resetItemDetailsBtn');
+
+$('#order-section').on('click', function() {
+    updateItemBtn.prop("disabled", true);
+    removeItemBtn.prop("disabled", true);
+});
 
 function fillCurrentDate(){
     $("#order-date").val(new Date().toISOString().slice(0, 10));
@@ -77,7 +85,7 @@ $('#custIdOption').on('change', function(){
 });
 
 /*load item code for combo box*/
-export  function loadAllItemCodes(){
+export function loadAllItemCodes(){
     console.log("load all item codes..");
     $('#itemCodeOption').empty();
 
@@ -100,6 +108,30 @@ $('#itemCodeOption').on('change', function(){
     }
 });
 
+updateItemBtn.on("click",function () {
+    let itemCodeValue = $('#itemCodeOption').val();
+    let qtyValue = parseInt($('#order-form-get-qty').val());
+
+    let existingItem =  items.find(item => item.itemCode === itemCodeValue);
+
+    if (existingItem){
+        if ($('#set-item-qty-on-hand').val() >= qtyValue){
+            /*Update the quantity of the existing item*/
+            existingItem.qty = qtyValue;
+
+            /*Populate the Item table*/
+            populateItemTable();
+
+            /*Reset the item details*/
+            resetOrderItemDetails.click();
+        }else {
+
+        }
+    }
+    $('#total').val();
+    updateTotal();
+
+});
 
 // Update quantity on hand when getting quantity is entered
 $('#order-form-get-qty').on('input', function() {
@@ -113,7 +145,7 @@ $('#order-form-get-qty').on('input', function() {
     }
 });
 
-// Add item to cart and update the order table
+//event handler for  Add item to cart button
 $('#add-to-cart-btn').on('click', function() {
     const selectedItemCode = $('#itemCodeOption').val();
     const selectedItem = item_db.find(item => item.itemCode === selectedItemCode);
@@ -128,6 +160,7 @@ $('#add-to-cart-btn').on('click', function() {
             itemCode: selectedItem.itemCode,
             itemName: selectedItem.itemName,
             price: selectedItem.unitPrice,
+            qtyOnHand: selectedItem.qtyOnHand,
             qty: getQty,
             total: itemTotal
         });
@@ -146,12 +179,37 @@ $('#add-to-cart-btn').on('click', function() {
     }
 });
 
-$('#reset-order-details-btn').on('click', function() {
+resetOrderItemDetails.on('click', function() {
     // Clear item details
+    $('#itemCodeOption').val('select item code');
     $('#set-order-form-item-name').val('');
     $('#set-order-form-item-price').val('');
     $('#set-item-qty-on-hand').val('');
     $('#order-form-get-qty').val('');
+});
+
+
+$("#item-order-table").on('click', 'tbody tr', function() {
+    let index = $(this).index();
+    recordIndex = index;
+
+    console.log("index: ", index);
+
+    let itemCodeValue = $(this).find('td:eq(0)').text();
+    let itemNameValue = $(this).find('td:eq(1)').text();
+    let priceValue = $(this).find('td:eq(2)').text();
+    let qtyOnHandValue = $(this).find('td:eq(3)').text();
+    let qtyValue= $(this).find('td:eq(4)').text();
+
+    $("#itemCodeOption").val(itemCodeValue);
+    $("#set-order-form-item-name").val(itemNameValue);
+    $("#set-order-form-item-price").val(priceValue);
+    $("#set-item-qty-on-hand").val(qtyOnHandValue);
+    $("#order-form-get-qty").val(qtyValue);
+
+    updateItemBtn.prop("disabled", false);
+    removeItemBtn.prop("disabled",false);
+    $('#add-to-cart-btn').prop("disabled", true);
 });
 
 function populateItemTable() {
@@ -164,6 +222,7 @@ function populateItemTable() {
                 <td>${item.itemCode}</td>
                 <td>${item.itemName}</td>
                 <td>${item.price}</td>
+                <td>${item.qtyOnHand}</td>
                 <td>${item.qty}</td>
                 <td>${item.total}</td>
             </tr>

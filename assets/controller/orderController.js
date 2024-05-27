@@ -5,7 +5,7 @@ import {order_db} from "../db/db.js";
 import {order_details_db} from "../db/db.js";
 import OrderModel from "../model/OrderModel.js";
 
-
+import { populateTableOrderDetails } from './orderDetailsController.js';
 
 var recordIndex;
 let selectedItemCode;
@@ -257,6 +257,8 @@ $('#btn-purchase').on('click', function() {
     resetAllButton.click();
     populateOrderIdField();
     fillCurrentDate();
+    // Repopulate the order details table
+    populateTableOrderDetails();
 });
 
 

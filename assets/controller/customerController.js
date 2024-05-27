@@ -143,7 +143,7 @@ $("#customer-save").on('click', () => {
     customer_db.push(customer);
 
     loadTable();
-    $("#customer-reset").click();
+    clearFields();
     populateCustomerIdField();
 
 });
@@ -214,4 +214,15 @@ $("#customer-search").on('click', () => {
     populateCustomerIdField();
 });
 
+function clearFields(){
+    $("#customer-Id").val("");
+    $("#customer-name").val("");
+    $("#customer-address").val("");
+    $("#contact-number").val("");
+    $("#email").val("");
 
+}
+$("#customer-reset").on('click', () => {
+    clearFields();
+    populateCustomerIdField();
+});

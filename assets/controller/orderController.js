@@ -12,12 +12,17 @@ let selectedItemCode;
 let resetAllButton=$('#resetAllBtn');
 let updateItemBtn=$('#update-item-btn');
 let removeItemBtn=$('#remove-item-btn');
+let invoiceUpdateBtn=$('#invoice-update-btn');
+let invoiceDeleteBtn=$('#invoice-delete-btn');
 let items = [];
 let resetOrderItemDetails=$('#resetItemDetailsBtn');
 
 $('#order-section').on('click', function() {
-    updateItemBtn.prop("disabled", true);
-    removeItemBtn.prop("disabled", true);
+    updateItemBtn.prop("disabled", false);
+    removeItemBtn.prop("disabled", false);
+    invoiceUpdateBtn.prop("disabled", false);
+    invoiceDeleteBtn.prop("disabled", false);
+
 });
 
 function fillCurrentDate(){
@@ -167,11 +172,12 @@ $('#add-to-cart-btn').on('click', function() {
 
         // Update the item quantity on hand in the database
         selectedItem.qtyOnHand -= getQty;
-        $('#reset-order-details-btn').click();
 
         // Populate the item order table
         populateItemTable();
 
+        /*Reset the item details*/
+        resetOrderItemDetails.click();
         // Update the total price
         updateTotal();
     } else {
@@ -186,6 +192,10 @@ resetOrderItemDetails.on('click', function() {
     $('#set-order-form-item-price').val('');
     $('#set-item-qty-on-hand').val('');
     $('#order-form-get-qty').val('');
+
+    $("#update-item-btn").prop("disabled", true);
+    $("#remove-item-btn").prop("disabled",true);
+    $('#add-to-cart-btn').prop("disabled", false);
 });
 
 
@@ -208,7 +218,7 @@ $("#item-order-table").on('click', 'tbody tr', function() {
     $("#order-form-get-qty").val(qtyValue);
 
     updateItemBtn.prop("disabled", false);
-    removeItemBtn.prop("disabled",false);
+    removeItemBtn.prop("disabled", false);
     $('#add-to-cart-btn').prop("disabled", true);
 });
 
@@ -283,6 +293,9 @@ resetAllButton.on("click", function () {
     /*clear the item order table*/
     $("#item-order-table tbody").empty();
 
+    $("#invoice-update-btn").prop("disabled", false);
+    $("#invoice-delete-btn").prop("disabled", false);
+    $("#btn-purchase").prop("disabled",true);
 });
 
 //purchase order

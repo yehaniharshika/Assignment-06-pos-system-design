@@ -3,50 +3,83 @@ import {customer_db, item_db} from "../db/db.js";
 
 var recordIndex;
 
-const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const mobilePattern = /^(?:0|94|\+94|0094)?(?:(11|21|23|24|25|26|27|31|32|33|34|35|36|37|38|41|45|47|51|52|54|55|57|63|65|66|67|81|91)(0|2|3|4|5|7|9)|7(0|1|2|4|5|6|7|8)\d)\d{6}$/;
+/*Validation*/
+const emailRegexPattern = new RegExp("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,}$");
+const mobileRegexPattern = new RegExp("^(070|071|072|074|075|076|077|078|038)\\d{7}$");
+const nameRegexPattern = new RegExp("[A-Za-z\\s]{3,}");
+const addressRegexPattern = new RegExp("[0-9]{1,}\\/[A-Z]\\s[a-zA-Z]+$|[0-9]{1,}[/0-9]{1,}\\s([A-Za-z])\\w+");
 
-/* Validation */
-function validation(value, message, pattern) {
-    if (!value) {
-        showValidationError('Null Input', 'Input ' + message);
-        return false;
+/*save customer*/
+$("#customer-save").on('click', (e) => {
+    var customerId = $('#customer-Id').val();
+    var name = $('#customer-name').val();
+    var address = $('#customer-address').val();
+    var contactNumber = $('#contact-number').val();
+    var email = $('#email').val();
+
+    if (!emailRegexPattern.test(email)){
+        Swal.fire({
+            icon:'error',
+            title: 'Invalid email',
+            text: 'please add correct email'
+        })
+        return;
     }
-    if (!pattern.test(value)) {
-        showValidationError('Invalid Input', 'Invalid Input ' + message);
-        return false;
+
+    if (!mobileRegexPattern.test(contactNumber)){
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid contact number',
+            text: 'only numbers are allowed(07X-XXXXXXX)'
+        })
+        return;
     }
-    return true;
-}
 
-/* Show Validation Error */
-function showValidationError(title, text) {
-    Swal.fire({
-        icon: 'error',
-        title: title,
-        text: text,
-        footer: '<a href="">Why do I have this issue?</a>'
-    });
-}
+    if (!nameRegexPattern.test(name)){
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid name',
+            text: 'add correct customer name'
+        })
+        return;
+    }
 
-/* Usage Example */
-$("#submit-button").on('click', function() {
-    let emailValue = $("#email-input").val();
-    let mobileValue = $("#mobile-input").val();
+    if (!addressRegexPattern.test(address)){
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid address',
+            text: 'add correct address'
+        })
+        return;
+    }
 
-    let isEmailValid = validation(emailValue, 'Email', emailPattern);
-    let isMobileValid = validation(mobileValue, 'Mobile Number', mobilePattern);
+    let customer = new CustomerModel(
+        customerId,
+        name,
+        address,
+        contactNumber,
+        email
+    );
 
-    // You can continue your form submission process based on the validation results
+    // push to the array
+    customer_db.push(customer);
+    Swal.fire(
+        'Save Successfully!',
+        'Customer saved successfully.',
+        'success'
+    );
+
+    loadTable();
+    clearFields();
+    populateCustomerIdField();
+
 });
-
 
 /*load customer for table*/
 function loadTable() {
-
     $("#customer-tbl-tbody").empty();
 
-   customer_db.map((item, index) => {
+    customer_db.map((item, index) => {
         console.log(item);
 
         let record = `<tr>
@@ -114,38 +147,6 @@ function populateCustomerIdField() {
 window.addEventListener('load', function() {
     // Call the function to populate the customer ID field
     populateCustomerIdField();
-});
-
-
-/*save customer*/
-$("#customer-save").on('click', () => {
-    var customerId = $('#customer-Id').val();
-    var name = $('#customer-name').val().trim();
-    var address = $('#customer-address').val().trim();
-    var contactNumber = $('#contact-number').val().trim();
-    var email = $('#email').val().trim();
-
-    let customer = new CustomerModel(
-        customerId,
-        name,
-        address,
-        contactNumber,
-        email
-    );
-
-    Swal.fire(
-        'Save Successfully!',
-        'Customer saved successfully.',
-        'success'
-    );
-
-    // push to the array
-    customer_db.push(customer);
-
-    loadTable();
-    clearFields();
-    populateCustomerIdField();
-
 });
 
 /*update customer*/

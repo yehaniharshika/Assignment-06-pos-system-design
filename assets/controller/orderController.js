@@ -17,13 +17,12 @@ let invoiceDeleteBtn=$('#invoice-delete-btn');
 let items = [];
 let resetOrderItemDetails=$('#resetItemDetailsBtn');
 
-$('#order-section').on('click', function() {
+/*$('#order-section').on('click', function() {
     updateItemBtn.prop("disabled", false);
     removeItemBtn.prop("disabled", false);
     invoiceUpdateBtn.prop("disabled", false);
     invoiceDeleteBtn.prop("disabled", false);
-
-});
+});*/
 
 function fillCurrentDate(){
     $("#order-date").val(new Date().toISOString().slice(0, 10));
@@ -113,30 +112,51 @@ $('#itemCodeOption').on('change', function(){
     }
 });
 
-updateItemBtn.on("click",function () {
+//update order items details
+updateItemBtn.on("click", function() {
     let itemCodeValue = $('#itemCodeOption').val();
     let qtyValue = parseInt($('#order-form-get-qty').val());
 
-    let existingItem =  items.find(item => item.itemCode === itemCodeValue);
+    let existingItem = items.find(item => item.itemCode === itemCodeValue);
 
-    if (existingItem){
-        if ($('#set-item-qty-on-hand').val() >= qtyValue){
-            /*Update the quantity of the existing item*/
+    if (existingItem) {
+        if ($('#set-item-qty-on-hand').val() >= qtyValue) {
+            // Update the quantity of the existing item
             existingItem.qty = qtyValue;
+            existingItem.total = existingItem.price * qtyValue;
 
-            /*Populate the Item table*/
+            // Populate the item table
             populateItemTable();
 
-            /*Reset the item details*/
+            // Reset the item details
             resetOrderItemDetails.click();
-        }else {
 
+        } else {
+            alert('Quantity exceeds stock available.');
         }
     }
-    $('#total').val();
-    updateTotal();
 
+    updateTotal();
 });
+
+
+//delete select order items details
+removeItemBtn.on("click", function() {
+    let itemCodeValue =  $('#itemCodeOption').val();
+
+    let index = items.findIndex(item => item.itemCode === itemCodeValue);
+    let removeItem = items.splice(index, 1)[0];
+
+    let selectedItem = item_db.find(item => item.itemCode === removeItem.itemCode);
+    if (selectedItem){
+        selectedItem.qtyOnHand = removeItem.qty;
+    }
+    selectedItem.qtyOnHand = $('#set-item-qty-on-hand').val();
+    populateItemTable();
+    resetOrderItemDetails.click();
+    updateTotal();
+});
+
 
 // Update quantity on hand when getting quantity is entered
 $('#order-form-get-qty').on('input', function() {
@@ -193,9 +213,9 @@ resetOrderItemDetails.on('click', function() {
     $('#set-item-qty-on-hand').val('');
     $('#order-form-get-qty').val('');
 
-    $("#update-item-btn").prop("disabled", true);
+   /* $("#update-item-btn").prop("disabled", true);
     $("#remove-item-btn").prop("disabled",true);
-    $('#add-to-cart-btn').prop("disabled", false);
+    $('#add-to-cart-btn').prop("disabled", false);*/
 });
 
 
@@ -217,9 +237,9 @@ $("#item-order-table").on('click', 'tbody tr', function() {
     $("#set-item-qty-on-hand").val(qtyOnHandValue);
     $("#order-form-get-qty").val(qtyValue);
 
-    updateItemBtn.prop("disabled", false);
+    /*updateItemBtn.prop("disabled", false);
     removeItemBtn.prop("disabled", false);
-    $('#add-to-cart-btn').prop("disabled", true);
+    $('#add-to-cart-btn').prop("disabled", true);*/
 });
 
 function populateItemTable() {
@@ -293,9 +313,9 @@ resetAllButton.on("click", function () {
     /*clear the item order table*/
     $("#item-order-table tbody").empty();
 
-    $("#invoice-update-btn").prop("disabled", false);
-    $("#invoice-delete-btn").prop("disabled", false);
-    $("#btn-purchase").prop("disabled",true);
+    // $("#invoice-update-btn").prop("disabled", false);
+    // $("#invoice-delete-btn").prop("disabled", false);
+    // $("#btn-purchase").prop("disabled",true);
 });
 
 //purchase order

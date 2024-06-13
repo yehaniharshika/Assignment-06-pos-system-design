@@ -213,7 +213,7 @@ resetOrderItemDetails.on('click', function() {
     $('#set-item-qty-on-hand').val('');
     $('#order-form-get-qty').val('');
 
-   /* $("#update-item-btn").prop("disabled", true);
+    /*$("#update-item-btn").prop("disabled", true);
     $("#remove-item-btn").prop("disabled",true);
     $('#add-to-cart-btn').prop("disabled", false);*/
 });
@@ -403,9 +403,9 @@ $("#order-search").on('click', () => {
                     return {
                         itemCode: item.itemCode,
                         itemName: item.itemName,
-                        price: item.unitPrice,
-                        qty: orderDetail.qty,
-                        total: orderDetail.qty * item.unitPrice
+                        price: parseFloat(item.unitPrice),
+                        qty: parseInt(orderDetail.qty),
+                        total: parseFloat(orderDetail.qty * item.unitPrice)
                     };
                 } else {
                     console.error(`Item not found for item code: ${orderDetail.itemCode}`);

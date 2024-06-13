@@ -183,7 +183,7 @@ $("#item-search").on('click', () => {
     }
 
     $("#item-search-code").val("");
-    // Delay the generation of the next item code by 2 seconds (2000 milliseconds)
+    //delay the generation of the next item code by 2 seconds (2000 milliseconds)
     setTimeout(() => {
         populateItemCodeField();
         $("#item-name").val("");

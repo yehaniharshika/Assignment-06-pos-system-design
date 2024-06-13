@@ -191,6 +191,7 @@ $("#customer-delete").on('click', () => {
 
     loadTable();
     $("#customer-reset").click();
+    populateCustomerIdField();
 });
 
 
@@ -212,7 +213,13 @@ $("#customer-search").on('click', () => {
     }
 
     $("#customer-search-by-id").val("");
-    populateCustomerIdField();
+    setTimeout(() => {
+        populateCustomerIdField()
+        $("#customer-name").val("");
+        $("#customer-address").val("");
+        $("#contact-number").val("");
+        $("#email").val("");
+    }, 2000);
 });
 
 function clearFields(){

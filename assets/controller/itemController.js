@@ -3,6 +3,57 @@ import {customer_db, item_db} from "../db/db.js";
 
 var recordIndex;
 var searchItemIndex = undefined;
+
+const itemNameRegexPattern = new RegExp("[A-Za-z\\s]{3,}");
+const  qtyOnHandRegexPattern = new RegExp("^\\d+$");
+
+/*save item*/
+$("#item-save").on('click', () => {
+    var itemCode = $('#item-code').val();
+    var itemName = $('#item-name').val();
+    var unitPrice = $('#unit-price').val();
+    var qtyOnHand = $('#qty-on-hand').val();
+
+    if (!itemNameRegexPattern.test(itemName)){
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid item name',
+            text: 'only letters allowed'
+        })
+        return;
+    }
+
+    if (!qtyOnHandRegexPattern.test(qtyOnHand)){
+        Swal.fire({
+            icon: 'error',
+            title: 'Invalid item QtyOnHand',
+            text: 'only numbers allowed'
+        })
+        return;
+    }
+
+
+    let item = new ItemModel(
+        itemCode,
+        itemName,
+        unitPrice,
+        qtyOnHand
+    );
+
+    Swal.fire(
+        'Save Successfully!',
+        'Item saved successfully.',
+        'success'
+    );
+
+    // push to the array
+    item_db.push(item);
+
+    loadTable();
+    $("#item-reset").click();
+    populateItemCodeField();
+});
+
 function loadTable() {
 
     $("#item-tbl-tbody").empty();
@@ -72,34 +123,6 @@ window.addEventListener('load', function() {
     populateItemCodeField();
 });
 
-/*save item*/
-$("#item-save").on('click', () => {
-    var itemCode = $('#item-code').val();
-    var itemName = $('#item-name').val().trim();
-    var unitPrice = $('#unit-price').val().trim();
-    var qtyOnHand = $('#qty-on-hand').val().trim();
-
-    let item = new ItemModel(
-        itemCode,
-        itemName,
-        unitPrice,
-        qtyOnHand
-    );
-
-    Swal.fire(
-        'Save Successfully!',
-        'Item saved successfully.',
-        'success'
-    );
-
-    // push to the array
-    item_db.push(item);
-
-    loadTable();
-    $("#item-reset").click();
-    populateItemCodeField();
-});
-
 /*update item*/
 $("#item-update").on('click', () => {
     var itemCode = $('#item-code').val();
@@ -160,12 +183,17 @@ $("#item-search").on('click', () => {
     }
 
     $("#item-search-code").val("");
-    populateItemCodeField();
+    // Delay the generation of the next item code by 2 seconds (2000 milliseconds)
+    setTimeout(() => {
+        populateItemCodeField();
+        $("#item-name").val("");
+        $("#unit-price").val("");
+        $("#qty-on-hand").val("");
+    }, 2000);
 });
 
 /*$("#item-reset").on('click', () => {
-    //$("#item-reset").click();
-    populateItemCodeField();
+    $("#customer-Id").val(generateItemCode());
 });*/
 
 
